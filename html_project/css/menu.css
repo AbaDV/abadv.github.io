@@ -1,0 +1,37 @@
+.menu-container {
+    margin-right: 2em;
+    width: 30%;
+    max-width: 200px;
+    flex-direction: column;
+}
+
+.menu {
+    background-color: lightblue;
+    list-style-type: none;
+    padding: 0;
+    margin-top: 0;
+}
+
+.menu .menu-item {
+    padding: 0px;
+}
+
+.menu-item-link,
+.menu-item-active {
+    color: black;
+    display: block;
+    padding: 1em;
+}
+
+.menu a:hover,
+.menu-item-active:hover,
+.header-buy-now-button:hover,
+.submit:hover,
+.button-form:hover {
+    background-color: #606060;
+    color: white;
+}
+
+.header-buy-now-button:hover, .submit:hover {
+    cursor: pointer;
+}

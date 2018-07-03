@@ -1,0 +1,166 @@
+.header {
+    background-image: url("../images/puzzle_1280.jpg");
+    background-size: 100%;
+    background-position: center;
+    background-color: #696969;
+    background-repeat: no-repeat;
+    margin-bottom: -1em;
+    padding-bottom: 3em;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    min-width: 900px;
+    max-width: 100%;
+}
+
+.header--logo {
+    margin-top: 1em;
+}
+
+.header-text {
+    margin-bottom: 3em;
+    text-align: center;
+}
+
+.header-top {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2em;
+}
+
+.header-center {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.header-center div {
+    background-color: lightgray;
+    margin-left: 4em;
+    height: 100%;
+    padding: 1em;
+    max-width: 30%;
+}
+
+.header-center div:first-child {
+    margin-left: 0;
+    max-width: 50%;
+}
+
+.header-buy-now-button {
+    background-color: yellow;
+    border: 0;
+    border: 2px solid transparent;
+    outline: none;
+    padding: 1em;
+}
+
+.header-buy-now-button:active,
+.button-form:active {
+    box-shadow: 4px 4px 4px 0px black;
+}
+
+.advertisment {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.header-social-icon {
+    opacity: 0.5;
+}
+
+.header-social-icon {
+    background-image: url('img/sprites_header32px.png');
+    width: 32px;
+    height: 32px;
+    margin: 0;
+}
+
+.special-offer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.social-icons {
+    display: flex;
+}
+
+.facebook {
+    background-position: 0px 0px;
+}
+
+.twitter {
+    background-position: -32px 0px;
+}
+
+.youtube {
+    background-position: -65px 0px;
+}
+
+.pinterest {
+    background-image: url('img/pinterest32px.png');
+}
+
+.instagram {
+    background-position: -95px 0px;
+}
+
+.main-social-icon-link,
+.main-social-icon {
+    display: block;
+    background-repeat: no-repeat;
+    width: 80%;
+    height: 150px;
+    opacity: 0.8;
+}
+
+.header-social-icon:hover,
+.main-social-icon-link:hover {
+    opacity: 1;
+}
+
+.main-social-icon-link:hover .main-social-icon {
+    opacity: 1;
+}
+
+.main-social-icon-facebook {
+    display: flex;
+    width: 33.3%;
+    background-color: #3b5997;
+}
+
+.main-social-icon-twitter {
+    display: flex;
+    width: 33.3%;
+    background-color: #3fccfd;
+}
+
+.main-social-icon-pinterest {
+    display: flex;
+    width: 33.3%;
+    background-color: #cb2027;
+}
+
+.main-social-icon-img-facebook {
+    margin: auto;
+    width: 30px;
+    height: 62px;
+}
+
+.main-social-icon-img-twitter {
+    margin: auto;
+    width: 64px;
+    height: 52px;
+}
+
+.main-social-icon-img-pinterest {
+    margin: auto;
+    width: 64px;
+    height: 64px;
+}

@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Page Title</title>
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body class="body-container">
+    <header class="header">
+        <div class="header--menu">
+            <h1 class="header--h1">Product name</h1>
+            <ul class="header--menu--list">
+                <li>Put on this page information about your product</li>
+                <li>A detailed description about your product</li>
+                <li>Tell us about the advantages and marits</li>
+                <li>Associate the page with the payment system</li>
+            </ul>
+        </div>
+        <img class="header--img" src="img/travel.png" alt="travel.png">
+    </header>
+    <main>
+
+        <section class="section_about_product">
+            <div class="block_about_product">
+                <h2 class="heading">About your product</h2>
+                <div class="information_about_product">
+                    <p>
+                        Quis cillum commodo duis reprehenderit nostrud tempor nostrud cillum eiusmod duis enim nulla laboris. Ullamco id deserunt
+                        Lorem sit do sunt qui. Sint est eiusmod mollit adipisicing. Quis fugiat adipisicing et magna qui
+                        ad culpa reprehenderit culpa irure tempor. Proident ex in esse labore voluptate reprehenderit cupidatat.
+                        In qui ex enim velit aliqua ut consectetur quis exercitation.
+                    </p>
+                    <p>
+                        Cillum nostrud proident nisi anim anim elit occaecat cupidatat. Esse voluptate occaecat cillum dolor non anim tempor aliqua.
+                        Qui exercitation veniam nisi veniam occaecat est excepteur est id.
+                    </p>
+                </div>
+            </div>
+            <video id="video" class="video" width="430" height="245" controls poster="video/Gaiserr.jpg" onmouseover="Play()" onmouseout="Pause()">
+                <source src="video/Gaiserr.ogv">
+                <source src="video/Gaiserr.mp4">
+                <source src="video/Gaiserr.webm"> Элемент video не поддерживается вашим браузером.
+                <a href="video/Gaiserr.mp4">Скачайте видео</a>
+            </video>
+            <script> 
+                var myVideo = document.getElementById("video");
+
+                function Pause() {
+                    myVideo.pause();
+                }
+                function Play() {
+                    if (myVideo.paused)
+                        myVideo.play();
+                }      
+            </script>
+        </section>
+
+        <section class="section_pluses_product">
+            <h2 class="text-center heading">Dignity and pluses product</h2>
+            <div class="pluses_product">
+                <div class="left_column">
+                    <details>
+                        <summary>Quis cillum commodo duis reprehenderit...</summary>
+                        <p>Quis cillum commodo duis reprehenderit nostrud tempor nostrud cillum eiusmod duis enim nulla laboris.
+                            Ullamco id deserunt Lorem sit do sunt qui. Sint est eiusmod mollit adipisicing. Quis fugiat adipisicing
+                            et magna qui ad culpa reprehenderit culpa irure tempor. Proident ex in esse labore voluptate
+                            reprehenderit cupidatat. In qui ex enim velit aliqua ut consectetur quis exercitation.</p>
+                    </details>
+                    <details>
+                        <summary>Quis cillum commodo duis reprehenderit...</summary>
+                        <p>Quis cillum commodo duis reprehenderit nostrud tempor nostrud cillum eiusmod duis enim nulla laboris.
+                            Ullamco id deserunt Lorem sit do sunt qui. Sint est eiusmod mollit adipisicing. Quis fugiat adipisicing
+                            et magna qui ad culpa reprehenderit culpa irure tempor. Proident ex in esse labore voluptate
+                            reprehenderit cupidatat. In qui ex enim velit aliqua ut consectetur quis exercitation.</p>
+                    </details>
+                    <details>
+                        <summary>Quis cillum commodo duis reprehenderit...</summary>
+                        <p>Quis cillum commodo duis reprehenderit nostrud tempor nostrud cillum eiusmod duis enim nulla laboris.
+                            Ullamco id deserunt Lorem sit do sunt qui. Sint est eiusmod mollit adipisicing. Quis fugiat adipisicing
+                            et magna qui ad culpa reprehenderit culpa irure tempor. Proident ex in esse labore voluptate
+                            reprehenderit cupidatat. In qui ex enim velit aliqua ut consectetur quis exercitation.</p>
+                    </details>
+                </div>
+                <div class="right_column">
+                    <details>
+                        <summary>Quis cillum commodo duis reprehenderit...</summary>
+                        <p>Quis cillum commodo duis reprehenderit nostrud tempor nostrud cillum eiusmod duis enim nulla laboris.
+                            Ullamco id deserunt Lorem sit do sunt qui. Sint est eiusmod mollit adipisicing. Quis fugiat adipisicing
+                            et magna qui ad culpa reprehenderit culpa irure tempor. Proident ex in esse labore voluptate
+                            reprehenderit cupidatat. In qui ex enim velit aliqua ut consectetur quis exercitation.</p>
+                    </details>
+                    <details>
+                        <summary>Quis cillum commodo duis reprehenderit...</summary>
+                        <p>Quis cillum commodo duis reprehenderit nostrud tempor nostrud cillum eiusmod duis enim nulla laboris.
+                            Ullamco id deserunt Lorem sit do sunt qui. Sint est eiusmod mollit adipisicing. Quis fugiat adipisicing
+                            et magna qui ad culpa reprehenderit culpa irure tempor. Proident ex in esse labore voluptate
+                            reprehenderit cupidatat. In qui ex enim velit aliqua ut consectetur quis exercitation.</p>
+                    </details>
+                    <details>
+                        <summary>Quis cillum commodo duis reprehenderit...</summary>
+                        <p>Quis cillum commodo duis reprehenderit nostrud tempor nostrud cillum eiusmod duis enim nulla laboris.
+                            Ullamco id deserunt Lorem sit do sunt qui. Sint est eiusmod mollit adipisicing. Quis fugiat adipisicing
+                            et magna qui ad culpa reprehenderit culpa irure tempor. Proident ex in esse labore voluptate
+                            reprehenderit cupidatat. In qui ex enim velit aliqua ut consectetur quis exercitation.</p>
+                    </details>
+                </div>
+            </div>
+        </section>
+
+        <section class="section_screenshots">
+            <h2 class="text-center heading">Screenshots</h2>
+            <div class="screenshots">
+                <div class="scrinshot_block">
+                    <figure>
+                        <img src="img/travel.png" alt="travel.png">
+                        <figcaption>
+                            <h3>The description for the image</h3>
+                            <p>Quis cillum commodo duis reprehenderit nostrud tempor nostrud cillum eiusmod duis enim nulla
+                                laboris. Ullamco id deserunt Lorem sit do sunt qui. Sint est eiusmod mollit adipisicing.</p>
+                        </figcaption>
+                    </figure>
+                </div>
+                <div class="scrinshot_block">
+                    <figure>
+                        <img src="img/travel.png" alt="travel.png">
+                        <figcaption>
+                            <h3>The description for the image</h3>
+                            <p>Quis cillum commodo duis reprehenderit nostrud tempor nostrud cillum eiusmod duis enim nulla
+                                laboris. Ullamco id deserunt Lorem sit do sunt qui. Sint est eiusmod mollit adipisicing.</p>
+                        </figcaption>
+                    </figure>
+                </div>
+                <div class="scrinshot_block">
+                    <figure>
+                        <img src="img/travel.png" alt="travel.png">
+                        <figcaption>
+                            <h3>The description for the image</h3>
+                            <p>Quis cillum commodo duis reprehenderit nostrud tempor nostrud cillum eiusmod duis enim nulla
+                                laboris. Ullamco id deserunt Lorem sit do sunt qui. Sint est eiusmod mollit adipisicing.</p>
+                        </figcaption>
+                    </figure>
+                </div>
+                <div class="scrinshot_block">
+                    <figure>
+                        <img src="img/travel.png" alt="travel.png">
+                        <figcaption>
+                            <h3>The description for the image</h3>
+                            <p>Quis cillum commodo duis reprehenderit nostrud tempor nostrud cillum eiusmod duis enim nulla
+                                laboris. Ullamco id deserunt Lorem sit do sunt qui. Sint est eiusmod mollit adipisicing.</p>
+                        </figcaption>
+                    </figure>
+                </div>
+            </div>
+        </section>
+
+        <section class="section_reviews">
+            <h2 class="text-center heading">Reviews</h2>
+            <div class="reviews">
+                <div class="review_block">
+                    <div class="flex_container">
+                        <img src="img/avatar.png" alt="avatar.png">
+                        <article>
+                            <p>Quis cillum commodo duis reprehenderit nostrud tempor nostrud cillum eiusmod duis enim nulla
+                                laboris. Ullamco id deserunt Lorem sit do sunt qui. Sint est eiusmod mollit adipisicing?</p>
+                            <h4>Lourens S.</h4>
+                        </article>
+                    </div>
+                </div>
+                <div class="review_block">
+                    <div class="flex_container">
+                        <img src="img/avatar.png" alt="avatar.png">
+                        <article>
+                            <p>Quis cillum commodo duis reprehenderit nostrud tempor nostrud cillum eiusmod duis enim nulla
+                                laboris. Ullamco id deserunt Lorem sit do sunt qui. Sint est eiusmod mollit adipisicing?</p>
+                            <h4>Lourens S.</h4>
+                        </article>
+                    </div>
+                </div>
+                <div class="review_block">
+                    <div class="flex_container">
+                        <img src="img/avatar.png" alt="avatar.png">
+                        <article>
+                            <p>Quis cillum commodo duis reprehenderit nostrud tempor nostrud cillum eiusmod duis enim nulla
+                                laboris. Ullamco id deserunt Lorem sit do sunt qui. Sint est eiusmod mollit adipisicing?</p>
+                            <h4>Lourens S.</h4>
+                        </article>
+                    </div>
+                </div>
+                <div class="review_block">
+                    <div class="flex_container">
+                        <img src="img/avatar.png" alt="avatar.png">
+                        <article>
+                            <p>Quis cillum commodo duis reprehenderit nostrud tempor nostrud cillum eiusmod duis enim nulla
+                                laboris. Ullamco id deserunt Lorem sit do sunt qui. Sint est eiusmod mollit adipisicing?</p>
+                            <h4>Lourens S.</h4>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section_buy">
+            <h2 class="text-center heading">Buy it now</h2>
+            <div class="flex_container information_about_buy">
+                <div class="tariff">
+                    <h3>Standart</h3>
+                    <span>$100</span>
+                    <ol>
+                        <li>Enim proident pariatur laborum velit.</li>
+                        <li>Enim proident pariatur laborum velit.</li>
+                        <li>Enim proident pariatur laborum velit.</li>
+                        <li>Enim proident pariatur laborum velit.</li>
+                    </ol>
+                    <a href="#" class="buy-link">buy</a>
+                </div>
+                <div class="tariff">
+                    <h3>Premium</h3>
+                    <span>$150</span>
+                    <ol>
+                        <li>Enim proident pariatur laborum velit.</li>
+                        <li>Enim proident pariatur laborum velit.</li>
+                        <li>Enim proident pariatur laborum velit.</li>
+                        <li>Enim proident pariatur laborum velit.</li>
+                        <li>Enim proident pariatur laborum velit.</li>
+                        <li>Enim proident pariatur laborum velit.</li>
+                        <li>Enim proident pariatur laborum velit.</li>
+                        <li>Enim proident pariatur laborum velit.</li>
+                    </ol>
+                    <a href="#" class="buy-link">buy</a>
+                </div>
+                <div class="tariff">
+                    <h3>Lux</h3>
+                    <span>$200</span>
+                    <ol>
+                        <li>Enim proident pariatur laborum velit.</li>
+                        <li>Enim proident pariatur laborum velit.</li>
+                        <li>Enim proident pariatur laborum velit.</li>
+                        <li>Enim proident pariatur laborum velit.</li>
+                        <li>Enim proident pariatur laborum velit.</li>
+                        <li>Enim proident pariatur laborum velit.</li>
+                        <li>Enim proident pariatur laborum velit.</li>
+                        <li>Enim proident pariatur laborum velit.</li>
+                        <li>Enim proident pariatur laborum velit.</li>
+                        <li>Enim proident pariatur laborum velit.</li>
+                        <li>Enim proident pariatur laborum velit.</li>
+                        <li>Enim proident pariatur laborum velit.</li>
+                    </ol>
+                    <a href="#" class="buy-link">buy</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <section class="contacts">
+            <h2 class="contacts--heading">Contacts</h2>
+
+            <div class="block_contacts">
+                <form action="mailto:#" method="post" class="label">
+                    <input class="field_form field" type="text" name="Your name" id="lastname" placeholder="Your name:">
+                    <input class="field_form field" type="email" name="Email" placeholder="Your email:">
+                    <textarea class="field_form input_form" name="Your message" cols="95" rows="10" placeholder="Your message:"></textarea>
+                    <div>
+                        <input class="button-form" type="submit" value="send">
+                    </div>
+                </form>
+
+                <div class="contact_info">
+                    <div class="contact_item">
+                        <img class="contact-icon" src="css/img/skype.png" alt="skype">
+                        <span>here_your_login_skype</span>
+                    </div>
+                    <div class="contact_item">
+                        <img class="contact-icon" src="css/img/icq.png" alt="icq">
+                        <span>279679659</span>
+                    </div>
+                    <div class="contact_item">
+                        <img class="contact-item" src="css/img/email.png" alt="email">
+                        <span>
+                            <a class="contact-link" href="mailto:newtech@1.com">psdhtmlcss@mail.com</a>
+                        </span>
+                    </div>
+                    <div class="contact_item">
+                        <img class="contact-icon" src="css/img/phone.png" alt="phone">
+                        <span>80 00&nbsp;4568 55 55</span>
+                    </div>
+                    <div class="social_btns">
+                        <a class="social_btn twitter" href="#" title="Twitter"></a>
+                        <a class="social_btn facebook" href="#" title="Facebook"></a>
+                        <a class="social_btn in" href="#" title="LinkedIn"></a>
+                        <a class="social_btn google" href="#" title="Google"></a>
+                        <a class="social_btn youtube" href="#" title="Youtube"></a>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <section>
+            <p class="block_copyright">Copyright &copy; 2018 Product name &#183; SD HTML CSS</p>
+        </section>
+    </footer>
+</body>
+
+</html>

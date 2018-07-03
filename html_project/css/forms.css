@@ -1,0 +1,49 @@
+.FIO {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}
+
+.name {
+    display: inline-block;
+    margin: 0 0.5em 0.5em 0;
+}
+
+.label input[placeholder],
+.label textarea {
+    background-color: antiquewhite;
+    border: 2px solid gray;
+    outline: none;
+    padding: 5px;
+    text-transform: capitalize;
+    width: 78%;
+}
+
+.label input[type="Email"]:focus {
+    background-color: beige;
+    color: red;
+}
+
+.label input[placeholder] {
+    height: 15px;
+    width: 197px;
+}
+
+.label input[name="Тема сообщения"] {
+    width: 78%;
+}
+
+.label input[type="Email"] {
+    text-transform: none;
+}
+
+.label legend {
+    font-size: 20px;
+    font-style: italic;
+    font-weight: 600;
+}
+
+.label textarea {
+    max-height: 160px;
+}
