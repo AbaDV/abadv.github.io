@@ -44,17 +44,6 @@
                 <source src="video/Gaiserr.webm"> Элемент video не поддерживается вашим браузером.
                 <a href="video/Gaiserr.mp4">Скачайте видео</a>
             </video>
-            <script> 
-                var myVideo = document.getElementById("video");
-
-                function Pause() {
-                    myVideo.pause();
-                }
-                function Play() {
-                    if (myVideo.paused)
-                        myVideo.play();
-                }      
-            </script>
         </section>
 
         <section class="section_pluses_product">
@@ -302,6 +291,19 @@
             <p class="block_copyright">Copyright &copy; 2018 Product name &#183; SD HTML CSS</p>
         </section>
     </footer>
+
+    <script> 
+        var myVideo = document.getElementById("video");
+
+        function Pause() {
+            myVideo.pause();
+        }
+        function Play() {
+            if (myVideo.paused)
+                myVideo.play();
+        }      
+    </script>
+
 </body>
 
 </html>
