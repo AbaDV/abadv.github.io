@@ -1,0 +1,1118 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+@font-face {
+    font-family: 'Raleway';
+    src: local('Raleway'), url('../fonts/raleway-bold.woff2'), url('../fonts/raleway-bold.woff'), url('../fonts/raleway-bold.ttf'), url('../fonts/raleway-bold.eot');
+}
+
+@font-face {
+    font-family: 'Raleway';
+    src: local('Raleway'), url('../fonts/raleway-extrabold.woff2'), url('../fonts/raleway-extrabold.woff'), url('../fonts/raleway-extrabold.ttf'), url('../fonts/raleway-extrabold.eot');
+}
+
+@font-face {
+    font-family: 'Raleway';
+    src: local('Raleway'), url('../fonts/raleway-medium.woff2'), url('../fonts/raleway-medium.woff'), url('../fonts/raleway-medium.ttf'), url('../fonts/raleway-medium.eot');
+}
+
+@font-face {
+    font-family: 'Raleway';
+    src: local('Raleway'), url('../fonts/raleway-regular.woff2'), url('../fonts/raleway-regular.woff'), url('../fonts/raleway-regular.ttf'), url('../fonts/raleway-regular.eot');
+}
+
+@font-face {
+    font-family: 'Raleway';
+    src: local('Raleway'), url('../fonts/raleway-semibold.woff2'), url('../fonts/raleway-semibold.woff'), url('../fonts/raleway-semibold.ttf'), url('../fonts/raleway-semibold.eot');
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: local('Montserrat'), url('../fonts/montserrat-extralight.woff2'), url('../fonts/montserrat-extralight.woff'), url('../fonts/montserrat-extralight.ttf'), url('../fonts/montserrat-extralight.eot');
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: local('Montserrat'), url('../fonts/montserrat-light.woff2'), url('../fonts/montserrat-light.woff'), url('../fonts/montserrat-light.ttf'), url('../fonts/montserrat-light.eot');
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: local('Montserrat'), url('../fonts/montserrat-regular.woff2'), url('../fonts/montserrat-regular.woff'), url('../fonts/montserrat-regular.ttf'), url('../fonts/montserrat-regular.eot');
+}
+
+.body {
+    min-width: 1200px;
+    max-width: 1920px;
+    margin: 0 auto;
+}
+
+.container {
+    min-width: 66%;
+    max-width: 66%;
+    margin: 0 auto;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+}
+
+.top-container {
+    min-width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+.header {
+    background-color: #f4f5f8;
+    background-color: rgba(17, 17, 17, 0.7);
+    background-image: url('img/photo.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.introduse_product {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.link {
+    margin: 14px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.link:hover {
+    color: #c7b29a;
+}
+
+.form--svg {
+    fill: #fff;
+}
+
+.form--svg:hover {
+    fill: #c7b29a;
+}
+
+.flex {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.radio {
+    justify-content: center;
+}
+
+.radio-btn {
+    display: block;
+    margin: 10px;
+    width: 11px;
+    height: 11px;
+    background-color: #ffffff;
+    border: 2px solid rgba(255, 255, 255, 0);
+    border-radius: 50%;
+}
+
+.radio-btn:first-child {
+    background-color: #d3c1ad;
+}
+
+.radio-btn:hover {
+    width: 11px;
+    height: 11px;
+    border: 2px solid #d3c1ad;
+    background-color: rgba(255, 255, 255, 0);
+}
+
+.radio-btn:active {
+    background-color: #d3c1ad;
+    border: 2px solid #d3c1ad;
+}
+
+.logo {
+    font-family: 'Raleway', sans-serif;
+    color: #ffffff;
+    font-size: 34px;
+    /* Приближение из-за подстановки шрифтов */
+    font-weight: 400;
+    text-align: right;
+}
+
+.logo--svg {
+    fill: #fff;
+}
+
+.logo:hover .logo--svg {
+    fill: #c7b29a;
+}
+
+.header--menu {
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    list-style-type: none;
+}
+
+.header--menu--item {
+    font-family: 'Montserrat', sans-serif;
+    color: #ffffff;
+    font-size: 14px;
+    /* Приближение из-за подстановки шрифтов */
+    font-weight: 300;
+    text-align: left;
+}
+
+.title_product h2 {
+    font-family: 'Raleway', sans-serif;
+    color: #ffffff;
+    font-size: 36px;
+    /* Приближение из-за подстановки шрифтов */
+    font-weight: 500;
+    text-align: center;
+    margin: 7px;
+}
+
+.title_product h1 {
+    font-family: 'Raleway', sans-serif;
+    color: #ffffff;
+    font-size: 52px;
+    /* Приближение из-за подстановки шрифтов */
+    font-weight: 700;
+    text-align: center;
+    margin: 7px;
+}
+
+.title_product p {
+    font-family: 'Montserrat', sans-serif;
+    color: #ffffff;
+    font-size: 16px;
+    /* Приближение из-за подстановки шрифтов */
+    font-weight: 300;
+    line-height: 24px;
+    /* Приближение из-за подстановки шрифтов */
+    text-align: center;
+    margin: 7px;
+    width: 562px;
+}
+
+.title_product {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 100%;
+    position: relative;
+    margin: 16rem 0 16rem 0;
+}
+
+.slider-arrow-forward {
+    display: block;
+    width: 40px;
+    height: 73px;
+    position: relative;
+    cursor: pointer;
+}
+
+.slider-arrow-back {
+    display: block;
+    width: 40px;
+    height: 73px;
+    position: relative;
+    cursor: pointer;
+}
+
+.slider-arrow-forward:after {
+    content: "";
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    border-top: 2px solid #ffffff;
+    border-right: 2px solid #ffffff;
+    transform: rotate(45deg);
+    position: absolute;
+    top: 14px;
+    left: -21px;
+}
+
+.slider-arrow-forward:hover:after {
+    border-top: 2px solid #d3c1ad;
+    border-right: 2px solid #d3c1ad;
+}
+
+.slider-arrow-back:before {
+    content: "";
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    border-left: 2px solid #ffffff;
+    border-bottom: 2px solid #ffffff;
+    transform: rotate(45deg);
+    position: absolute;
+    top: 14px;
+    left: 15px;
+}
+
+.slider-arrow-back:hover:before {
+    border-left: 2px solid #d3c1ad;
+    border-bottom: 2px solid #d3c1ad;
+}
+
+.btn {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    outline: none;
+    border-radius: 0.2rem;
+    border-bottom: 0.3rem solid rgb(97, 88, 85);
+    box-sizing: border-box;
+    background-color: #998675;
+    /* width: 170px; */
+    width: 184px;
+    height: 53px;
+    font-family: 'Raleway', sans-serif;
+    color: #ffffff;
+    font-size: 14px;
+    /* Приближение из-за подстановки шрифтов */
+    font-weight: 700;
+    line-height: 23px;
+    /* Приближение из-за подстановки шрифтов */
+    margin: 52px;
+    position: relative;
+}
+
+.btn:hover {
+    box-shadow: 5px 10px 10px 0 #090604;
+}
+
+.btn:active {
+    border-bottom: 0;
+    top: 0.3rem;
+}
+
+.flex_column {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.icon_pen {
+    padding-top: 0;
+}
+
+.icon_development {
+    padding-top: 6px;
+}
+
+.icon_customization {
+    padding-top: 6px;
+}
+
+.icon_marketing {
+    padding-top: 13px;
+}
+
+.presentation--svg {
+    display: block;
+    box-sizing: border-box;
+    height: 49px;
+    background-color: #ffffff;
+    fill: #555555;
+    margin: 29px;
+}
+
+.presentation--figcaption {
+    font-family: 'Raleway', sans-serif;
+    color: #555555;
+    font-size: 22px;
+    /* Приближение из-за подстановки шрифтов */
+    font-weight: 600;
+}
+
+.presentation--figure {
+    margin: 1rem;
+    width: 20rem;
+    cursor: pointer;
+}
+
+.presentation--figure:hover .presentation--svg {
+    fill: #c7b299;
+}
+
+.presentation--figure:hover .presentation--figcaption {
+    color: #c7b299;
+}
+
+.presentation--figure:hover .presentation--figcaption p:after {
+    background-color: #c7b299;
+}
+
+.presentation--figcaption p {
+    font-family: 'Montserrat', sans-serif;
+    color: #8c8c8c;
+    font-size: 14px;
+    /* Приближение из-за подстановки шрифтов */
+    font-weight: 300;
+    line-height: 24px;
+    /* Приближение из-за подстановки шрифтов */
+}
+
+.presentation--figcaption p:after {
+    content: "";
+    display: block;
+    background-color: #f1eee9;
+    width: 70px;
+    height: 3px;
+    margin: 0 auto;
+    align-self: flex-end;
+    margin-top: 30px;
+}
+
+.presentation--figcaption p:hover:after {
+    background-color: #c7b299;
+}
+
+.presentation-description {
+    display: flex;
+    background-color: #fbfaf8;
+    width: 100%;
+    padding-top: 3rem;
+}
+
+.presentation-description span {
+    font-family: 'Raleway', sans-serif;
+    color: #555555;
+    font-size: 30px;
+    /* Приближение из-за подстановки шрифтов */
+    font-weight: 600;
+    text-align: center;
+}
+
+.presentation-description p {
+    width: 770px;
+    font-family: 'Montserrat', sans-serif;
+    color: #8c8c8c;
+    font-size: 16px;
+    /* Приближение из-за подстановки шрифтов */
+    font-weight: 300;
+    line-height: 28px;
+    /* Приближение из-за подстановки шрифтов */
+    margin-bottom: 0;
+}
+
+.presentation-description--screen {
+    display: block;
+    width: 770px;
+    height: 482px;
+    background-color: inherit;
+    background-image: url('img/browser-center.png'), url('img/browser-left.png'), url('img/browser-right.png');
+    background-position: bottom center, bottom left, bottom right;
+    background-repeat: no-repeat, no-repeat, no-repeat;
+}
+
+.promotion,
+.video_presentation,
+.statistics {
+    background: -webkit-linear-gradient(0deg, #211b19 0%, #4e3427 100%);
+    background: -moz-linear-gradient(0deg, #211b19 0%, #4e3427 100%);
+    background: -o-linear-gradient(0deg, #211b19 0%, #4e3427 100%);
+    background: -ms-linear-gradient(0deg, #211b19 0%, #4e3427 100%);
+    background: linear-gradient(90deg, #211b19 0%, #4e3427 100%);
+    width: 1920px;
+}
+
+.promotion span {
+    font-family: 'Raleway', sans-serif;
+    color: #c7b299;
+    font-size: 28px;
+    /* Приближение из-за подстановки шрифтов */
+    font-weight: 400;
+    text-align: left;
+    /* Встроенный стиль */
+    font-family: 'Raleway', sans-serif;
+    color: #ffffff;
+    font-size: 28px;
+    /* Приближение из-за подстановки шрифтов */
+    font-weight: 400;
+    text-align: left;
+}
+
+.promotion p {
+    font-family: 'Montserrat', sans-serif;
+    color: #615855;
+    font-size: 18px;
+    /* Приближение из-за подстановки шрифтов */
+    font-weight: 300;
+    text-align: left;
+}
+
+.promotion--block {
+    align-items: flex-start;
+}
+
+.list_of_projects h2 {
+    font-family: 'Raleway', sans-serif;
+    color: #555555;
+    font-size: 30px;
+    /* Приближение из-за подстановки шрифтов */
+    font-weight: 600;
+    text-align: center;
+}
+
+.list_of_projects p {
+    font-family: 'Montserrat', sans-serif;
+    color: #8c8c8c;
+    font-size: 16px;
+    /* Приближение из-за подстановки шрифтов */
+    font-weight: 300;
+    line-height: 28px;
+    /* Приближение из-за подстановки шрифтов */
+    text-align: center;
+    width: 757px;
+}
+
+.list_of_projects--menu {
+    list-style-type: none;
+}
+
+.list_of_projects li {
+    border-radius: 3px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #ebebeb;
+    box-sizing: border-box;
+    background-color: rgba(17, 17, 17, 0);
+    width: 120px;
+    height: 32px;
+    font-family: Montserrat, sans-serif;
+    color: #8c8c8c;
+    font-size: 14px;
+    /* Приближение из-за подстановки шрифтов */
+    font-weight: 300;
+    line-height: 21px;
+    /* Приближение из-за подстановки шрифтов */
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.list_of_projects li:first-child {
+    background-color: #998675;
+    color: #ffffff;
+}
+
+.list_of_projects li:hover {
+    background-color: rgba(17, 17, 17, 0);
+    border-color: #998675;
+    color: #998675;
+}
+
+.list_of_projects li:active {
+    background-color: #998675;
+    color: #ffffff;
+}
+
+.list_of_projects--articles {
+    flex-wrap: wrap;
+}
+
+.list_of_projects--article,
+.list_of_projects--article p {
+    width: 370px;
+}
+
+.list_of_projects--article {
+    margin: 0 auto;
+    background-color: #fbfaf8;
+    width: 370px;
+    height: 337px;
+    margin: 0.25rem;
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    position: relative;
+    cursor: pointer;
+}
+
+.list_of_projects--article h2 {
+    font-family: 'Raleway', sans-serif;
+    color: #c7b29a;
+    font-size: 20px;
+    /* Приближение из-за подстановки шрифтов */
+    font-weight: 500;
+    text-align: left;
+    margin: 30px 0 0 28px;
+}
+
+.list_of_projects--article span {
+    display: block;
+    font-family: 'Montserrat', sans-serif;
+    color: #d1d1d1;
+    font-size: 14px;
+    /* Приближение из-за подстановки шрифтов */
+    font-weight: 300;
+    line-height: 20px;
+    /* Приближение из-за подстановки шрифтов */
+    text-align: left;
+    margin: 14px 0 0 28px;
+}
+
+.list_of_projects--article img {
+    display: block;
+}
+
+.list_of_projects--article--svg {
+    fill: #ffffff;
+    position: absolute;
+    /* visibility: hidden; */
+}
+
+.list_of_projects--article--svg--link {
+    fill: #ffffff;
+    position: absolute;
+    top: 110px;
+    left: 144px;
+}
+
+.list_of_projects--article--svg--lupa {
+    fill: #ffffff;
+    position: absolute;
+    top: 110px;
+    left: 198px;
+}
+
+.list_of_projects--article--svg:hover {
+    fill: #c7b299;
+    /* visibility: unset; */
+}
+
+.list_of_projects--article:hover {
+    background-color: #362f2d;
+}
+
+.list_of_projects--article:hover h2 {
+    color: #ffffff;
+}
+
+.list_of_projects--article:hover span {
+    color: #c7b299;
+}
+
+.list_of_projects--article:active {
+    box-shadow: #211b19 2px 2px 2px 2px;
+}
+
+.list_of_projects--article:after {
+    content: '';
+    position: absolute;
+    left: 19px;
+    bottom: 100px;
+    border: 15px solid transparent;
+    border-bottom: 10px solid #fff;
+}
+
+.list_of_projects--article:hover:after {
+    border-bottom: 10px solid #362f2d;
+}
+
+.load_more {
+    margin-top: 10px;
+}
+
+.video_presentation {
+    position: relative;
+    cursor: pointer;
+    height: 705px;
+}
+
+.video {
+    padding: 0;
+    width: 1920px;
+    height: 704px;
+}
+
+.about_video {
+    padding: 0;
+    position: absolute;
+    width: 552px;
+    margin: 0 auto;
+    bottom: 30%;
+    left: 35%;
+}
+
+.about_video h2 {
+    font-family: 'Raleway', sans-serif;
+    color: #ffffff;
+    font-size: 30px;
+    /* Приближение из-за подстановки шрифтов */
+    font-weight: 500;
+    text-align: center;
+}
+
+.about_video p {
+    font-family: 'Montserrat', sans-serif;
+    color: #ffffff;
+    font-size: 16px;
+    /* Приближение из-за подстановки шрифтов */
+    font-weight: 300;
+    line-height: 28px;
+    /* Приближение из-за подстановки шрифтов */
+    text-align: center;
+}
+
+.about_video time {
+    font-family: 'Montserrat', sans-serif;
+    color: #c7b299;
+    font-size: 14px;
+    /* Приближение из-за подстановки шрифтов */
+    font-weight: 400;
+    line-height: 24px;
+    /* Приближение из-за подстановки шрифтов */
+    text-align: center;
+}
+
+.circle {
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0.2);
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.play {
+    fill: white;
+}
+
+.play:hover {
+    fill: #c7b299;
+    opacity: 1;
+}
+
+.play:active {
+    fill: #c7b299;
+    opacity: 0.5;
+}
+
+.product_information {
+    justify-content: center;
+}
+
+.product_information h2 {
+    font-family: 'Raleway', sans-serif;
+    color: #555555;
+    font-size: 30px;
+    /* Приближение из-за подстановки шрифтов */
+    font-weight: 600;
+    text-align: left;
+}
+
+.product_information p {
+    font-family: 'Montserrat', sans-serif;
+    color: #8c8c8c;
+    font-size: 16px;
+    /* Приближение из-за подстановки шрифтов */
+    font-weight: 300;
+    line-height: 28px;
+    /* Приближение из-за подстановки шрифтов */
+    text-align: left;
+}
+
+.product_information ul {
+    font-family: 'Montserrat', sans-serif;
+    color: #8c8c8c;
+    font-size: 16px;
+    /* Приближение из-за подстановки шрифтов */
+    font-weight: 300;
+    line-height: 32px;
+    /* Приближение из-за подстановки шрифтов */
+    text-align: left;
+    list-style-type: none;
+}
+
+.product_information li {
+    position: relative;
+    margin: 0 0 29px 10px;
+    position: relative;
+    background: url(img/arrow_marker.png) no-repeat left;
+    padding-left: 3rem;
+}
+
+.iPhone_in_hand {
+    display: block;
+}
+
+.iPhone_in_hand_article {
+    align-items: flex-start;
+}
+
+.statistics_icon {
+    fill: #c7b299;
+    width: 44px;
+    height: 44px;
+    margin-bottom: 30px;
+}
+
+.statistics span {
+    font-family: 'Montserrat', sans-serif;
+    color: #c7b299;
+    font-size: 14px;
+    /* Приближение из-за подстановки шрифтов */
+    font-weight: 300;
+    line-height: 20px;
+    /* Приближение из-за подстановки шрифтов */
+    text-align: center;
+    text-transform: uppercase;
+    margin-top: 21px;
+}
+
+.statistics figcaption {
+    font-family: 'Montserrat', sans-serif;
+    color: #ffffff;
+    font-size: 48px;
+    /* Приближение из-за подстановки шрифтов */
+    font-weight: 200;
+    line-height: 36px;
+    /* Приближение из-за подстановки шрифтов */
+    text-align: center;
+}
+
+.statistics span:after {
+    content: "";
+    display: block;
+    background-color: #ffffff;
+    width: 30px;
+    height: 2px;
+    margin: 0 auto;
+    align-self: flex-end;
+    margin-top: 30px;
+}
+
+.recent_posts h2 {
+    font-family: 'Raleway', sans-serif;
+    color: #555555;
+    font-size: 30px;
+    /* Приближение из-за подстановки шрифтов */
+    font-weight: 600;
+    text-align: center;
+    margin-top: 82px;
+}
+
+.recent_posts p {
+    font-family: 'Montserrat', sans-serif;
+    color: #8c8c8c;
+    font-size: 16px;
+    /* Приближение из-за подстановки шрифтов */
+    font-weight: 300;
+    line-height: 28px;
+    /* Приближение из-за подстановки шрифтов */
+    text-align: center;
+    width: 757px;
+}
+
+.recent_posts--article {
+    width: 370px;
+    height: 395px;
+    background-color: #fbfaf8;
+    align-items: flex-start;
+    position: relative;
+}
+
+.recent_posts--article:hover {
+    background-color: #362f2d;
+}
+
+.recent_posts--article--h3 {
+    font-family: 'Raleway', sans-serif;
+    color: #555555;
+    font-size: 20px;
+    /* Приближение из-за подстановки шрифтов */
+    font-weight: 500;
+    text-align: left;
+    margin: 30px 0 0 29px;
+}
+
+.recent_posts--article:hover .recent_posts--article--h3 {
+    color: #c7b299;
+}
+
+.recent_posts--article:hover .recent_posts_time_day {
+    background-color: #c7b299;
+}
+
+.recent_posts--article:hover .recent_posts_time_month {
+    background-color: #a48d72;
+}
+
+.recent_posts--article p {
+    font-family: 'Montserrat', sans-serif;
+    color: #8c8c8c;
+    font-size: 14px;
+    /* Приближение из-за подстановки шрифтов */
+    font-weight: 300;
+    line-height: 22px;
+    /* Приближение из-за подстановки шрифтов */
+    text-align: left;
+    width: 297px;
+    margin: 19px 0 27px 29px;
+}
+
+.read_more {
+    font-family: 'Montserrat', sans-serif;
+    color: #c7b29a;
+    font-size: 14px;
+    /* Приближение из-за подстановки шрифтов */
+    font-weight: 300;
+    text-align: left;
+    margin: 0 0 0 29px;
+    opacity: 0.7;
+}
+
+.read_more svg {
+    fill: #c7b29a;
+    opacity: 0.7;
+}
+
+.read_more:hover {
+    color: #c7b29a;
+    opacity: 1;
+}
+
+.read_more:hover svg {
+    fill: #c7b29a;
+    opacity: 1;
+}
+
+.read_more:active {
+    color: #fff;
+    opacity: 0.5;
+}
+
+.read_more:active svg {
+    fill: #fff;
+    opacity: 0.5;
+}
+
+.img_post_men--radio {
+    position: absolute;
+    top: 180px;
+    left: 100px;
+}
+
+.recent_posts--arrow {
+    fill: #d1d1d1;
+    width: 22px;
+    height: 22px;
+    cursor: pointer;
+    margin: 4px;
+}
+
+.recent_posts--arrow:hover {
+    fill: #c7b299;
+    width: 22px;
+    height: 22px;
+}
+
+.recent_posts_time_day {
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    background-color: #363636;
+    width: 50px;
+    height: 35px;
+    font-family: 'Montserrat', sans-serif;
+    color: #ffffff;
+    font-size: 24px;
+    /* Приближение из-за подстановки шрифтов */
+    font-weight: 300;
+    line-height: 20px;
+    /* Приближение из-за подстановки шрифтов */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: 20px;
+    right: 350px;
+}
+
+.recent_posts_time_month {
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
+    background-color: #252525;
+    width: 50px;
+    height: 25px;
+    font-family: 'Roboto', sans-serif;
+    color: #ffffff;
+    font-size: 12px;
+    /* Приближение из-за подстановки шрифтов */
+    font-weight: 400;
+    line-height: 20px;
+    /* Приближение из-за подстановки шрифтов */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: 20px;
+    right: 350px;
+}
+
+.rewards {
+    background-color: rgba(17, 17, 17, 0.7);
+    background-image: url('img/photo_background_rewards.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.logo--img:hover {
+    opacity: 0.5;
+}
+
+.news {
+    background-color: #191919;
+}
+
+.widgets {
+    width: 270px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.widget {
+    margin-bottom: 10px;
+}
+
+.сopyright {
+    background-color: #111111;
+}
+
+.copyright-left {
+    font-family: 'Montserrat', sans-serif;
+    color: #545454;
+    font-size: 13px;
+    /* Приближение из-за подстановки шрифтов */
+    font-weight: 300;
+    line-height: 20px;
+    /* Приближение из-за подстановки шрифтов */
+    text-align: left;
+    /* Встроенный стиль */
+    font-family: 'Montserrat', sans-serif;
+    color: #959595;
+    font-size: 13px;
+    /* Приближение из-за подстановки шрифтов */
+    font-weight: 300;
+    line-height: 20px;
+    /* Приближение из-за подстановки шрифтов */
+    text-align: left;
+    /* Встроенный стиль */
+    font-family: 'Montserrat', sans-serif;
+    color: #242424;
+    font-size: 13px;
+    /* Приближение из-за подстановки шрифтов */
+    font-weight: 300;
+    line-height: 20px;
+    /* Приближение из-за подстановки шрифтов */
+    text-align: left;
+    /* Встроенный стиль */
+    font-family: 'Montserrat', sans-serif;
+    color: #c7b299;
+    font-size: 13px;
+    /* Приближение из-за подстановки шрифтов */
+    font-weight: 300;
+    line-height: 20px;
+    /* Приближение из-за подстановки шрифтов */
+    text-align: left;
+}
+
+.copyright-right {
+    font-family: 'Montserrat', sans-serif;
+    color: #545454;
+    font-size: 13px;
+    /* Приближение из-за подстановки шрифтов */
+    font-weight: 300;
+    line-height: 20px;
+    /* Приближение из-за подстановки шрифтов */
+    text-align: right;
+    /* Встроенный стиль */
+    font-family: 'Montserrat', sans-serif;
+    color: #959595;
+    font-size: 13px;
+    /* Приближение из-за подстановки шрифтов */
+    font-weight: 300;
+    line-height: 20px;
+    /* Приближение из-за подстановки шрифтов */
+    text-align: right;
+    /* Встроенный стиль */
+    font-family: 'Montserrat', sans-serif;
+    color: #242424;
+    font-size: 13px;
+    /* Приближение из-за подстановки шрифтов */
+    font-weight: 300;
+    line-height: 20px;
+    /* Приближение из-за подстановки шрифтов */
+    text-align: right;
+}
+
+hr {
+    background-color: #252525;
+    width: 100%;
+    /* width: 270px; */
+    height: 2px;
+}
+
+.Recent_Posts h2,
+.Our_Twitter h2,
+.Dribbble_Widget h2 {
+    font-family: 'Raleway', sans-serif;
+    color: #ffffff;
+    font-size: 24px;
+    /* Приближение из-за подстановки шрифтов */
+    font-weight: 700;
+    text-align: left;
+}
+
+.Recent_Posts--time,
+.Our_Twitter--time {
+    font-family: 'Montserrat', sans-serif;
+    color: #363636;
+    font-size: 12px;
+    /* Приближение из-за подстановки шрифтов */
+    font-weight: 300;
+    line-height: 20px;
+    /* Приближение из-за подстановки шрифтов */
+    text-align: left;
+}
+
+.Waxom--p,
+.Recent_Posts--p,
+.Our_Twitter--p {
+    font-family: Montserrat;
+    color: #545454;
+    font-size: 14px;
+    /* Приближение из-за подстановки шрифтов */
+    font-weight: 300;
+    line-height: 20px;
+    /* Приближение из-за подстановки шрифтов */
+    text-align: left;
+}
+
+.Recent_Posts div:hover .Recent_Posts--p, 
+.Our_Twitter div:hover .Our_Twitter--p 
+    {
+    color: #c7b299;
+}
+
+.Recent_Posts div:hover .Recent_Posts--time, 
+.Our_Twitter div:hover .Our_Twitter--time 
+    {
+    color: #fff;
+}
