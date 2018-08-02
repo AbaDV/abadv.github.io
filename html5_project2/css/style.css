@@ -800,6 +800,11 @@
     margin-top: 30px;
 }
 
+.recent_posts {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+}
+
 .recent_posts h2 {
     font-family: 'Raleway', sans-serif;
     color: #555555;
@@ -819,6 +824,10 @@
     /* Приближение из-за подстановки шрифтов */
     text-align: center;
     width: 757px;
+}
+
+.recent_posts--articles {
+    justify-content: space-between;
 }
 
 .recent_posts--article {
@@ -1073,10 +1082,10 @@ hr {
 .Recent_Posts,
 .Our_Twitter,
 .Dribbble_Widget {
-    /* width: 258px; */
     width: 25%;
     padding-left: 1rem;
     padding-right: 1rem;
+    align-items: flex-start;
 }
 
 .Waxom--p,
@@ -1090,6 +1099,15 @@ hr {
     line-height: 20px;
     /* Приближение из-за подстановки шрифтов */
     text-align: left;
+}
+
+.Waxom--p {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.footer--link {
+    margin: 0;
 }
 
 .Our_Twitter--p span {
