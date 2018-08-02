@@ -1018,6 +1018,7 @@
     line-height: 20px;
     /* Приближение из-за подстановки шрифтов */
     text-align: left;
+    padding: 0;
 }
 
 .сopyright-container a {
