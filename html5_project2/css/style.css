@@ -574,7 +574,12 @@
 .list_of_projects--article--svg {
     fill: #ffffff;
     position: absolute;
-    /* visibility: hidden; */
+    visibility: hidden;
+}
+
+.list_of_projects--article--svg:hover {
+    fill: #c7b299;
+    visibility: visible;
 }
 
 .list_of_projects--article--svg--link {
@@ -589,11 +594,6 @@
     position: absolute;
     top: 110px;
     left: 198px;
-}
-
-.list_of_projects--article--svg:hover {
-    fill: #c7b299;
-    /* visibility: unset; */
 }
 
 .list_of_projects--article:hover {
@@ -707,6 +707,7 @@
 
 .product_information {
     justify-content: center;
+    padding-bottom: 0;
 }
 
 .product_information h2 {
@@ -806,7 +807,6 @@
     /* Приближение из-за подстановки шрифтов */
     font-weight: 600;
     text-align: center;
-    margin-top: 82px;
 }
 
 .recent_posts p {
@@ -981,6 +981,10 @@
     background-color: #191919;
 }
 
+.news-container {
+    align-items: flex-start;
+}
+
 .widgets {
     width: 270px;
     flex-wrap: wrap;
@@ -995,36 +999,10 @@
     background-color: #111111;
 }
 
-.copyright-left {
+.сopyright-container {
+    justify-content: space-between;
     font-family: 'Montserrat', sans-serif;
     color: #545454;
-    font-size: 13px;
-    /* Приближение из-за подстановки шрифтов */
-    font-weight: 300;
-    line-height: 20px;
-    /* Приближение из-за подстановки шрифтов */
-    text-align: left;
-    /* Встроенный стиль */
-    font-family: 'Montserrat', sans-serif;
-    color: #959595;
-    font-size: 13px;
-    /* Приближение из-за подстановки шрифтов */
-    font-weight: 300;
-    line-height: 20px;
-    /* Приближение из-за подстановки шрифтов */
-    text-align: left;
-    /* Встроенный стиль */
-    font-family: 'Montserrat', sans-serif;
-    color: #242424;
-    font-size: 13px;
-    /* Приближение из-за подстановки шрифтов */
-    font-weight: 300;
-    line-height: 20px;
-    /* Приближение из-за подстановки шрифтов */
-    text-align: left;
-    /* Встроенный стиль */
-    font-family: 'Montserrat', sans-serif;
-    color: #c7b299;
     font-size: 13px;
     /* Приближение из-за подстановки шрифтов */
     font-weight: 300;
@@ -1033,16 +1011,7 @@
     text-align: left;
 }
 
-.copyright-right {
-    font-family: 'Montserrat', sans-serif;
-    color: #545454;
-    font-size: 13px;
-    /* Приближение из-за подстановки шрифтов */
-    font-weight: 300;
-    line-height: 20px;
-    /* Приближение из-за подстановки шрифтов */
-    text-align: right;
-    /* Встроенный стиль */
+.сopyright-container a {
     font-family: 'Montserrat', sans-serif;
     color: #959595;
     font-size: 13px;
@@ -1051,22 +1020,30 @@
     line-height: 20px;
     /* Приближение из-за подстановки шрифтов */
     text-align: right;
-    /* Встроенный стиль */
-    font-family: 'Montserrat', sans-serif;
-    color: #242424;
-    font-size: 13px;
-    /* Приближение из-за подстановки шрифтов */
-    font-weight: 300;
-    line-height: 20px;
-    /* Приближение из-за подстановки шрифтов */
-    text-align: right;
+}
+
+.link-design {
+    margin: 0;
 }
 
 hr {
     background-color: #252525;
     width: 100%;
-    /* width: 270px; */
     height: 2px;
+    border: none;
+}
+
+.social_link {
+    font-family: 'Montserrat', sans-serif;
+    color: #00bff3;
+    font-size: 14px;
+    /* Приближение из-за подстановки шрифтов */
+    font-weight: 300;
+    line-height: 20px;
+    /* Приближение из-за подстановки шрифтов */
+    text-align: left;
+    text-decoration: none;
+    cursor: pointer;
 }
 
 .Recent_Posts h2,
@@ -1092,10 +1069,20 @@ hr {
     text-align: left;
 }
 
+.Waxom,
+.Recent_Posts,
+.Our_Twitter,
+.Dribbble_Widget {
+    /* width: 258px; */
+    width: 25%;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
 .Waxom--p,
 .Recent_Posts--p,
 .Our_Twitter--p {
-    font-family: Montserrat;
+    font-family: 'Montserrat', sans-serif;
     color: #545454;
     font-size: 14px;
     /* Приближение из-за подстановки шрифтов */
@@ -1105,14 +1092,23 @@ hr {
     text-align: left;
 }
 
-.Recent_Posts div:hover .Recent_Posts--p, 
-.Our_Twitter div:hover .Our_Twitter--p 
-    {
+.Our_Twitter--p span {
+    font-family: 'Montserrat', sans-serif;
+    color: #959595;
+    font-size: 14px;
+    /* Приближение из-за подстановки шрифтов */
+    font-weight: 300;
+    line-height: 20px;
+    /* Приближение из-за подстановки шрифтов */
+    text-align: left;
+}
+
+.Recent_Posts div:hover .Recent_Posts--p,
+.Our_Twitter div:hover .Our_Twitter--p {
     color: #c7b299;
 }
 
-.Recent_Posts div:hover .Recent_Posts--time, 
-.Our_Twitter div:hover .Our_Twitter--time 
-    {
+.Recent_Posts div:hover .Recent_Posts--time,
+.Our_Twitter div:hover .Our_Twitter--time {
     color: #fff;
 }
