@@ -40,17 +40,8 @@
 }
 
 .body {
-    min-width: 1200px;
-    max-width: 1920px;
+    width: 1920px;
     margin: 0 auto;
-}
-
-.container {
-    min-width: 66%;
-    max-width: 66%;
-    margin: 0 auto;
-    padding-top: 1.5rem;
-    padding-bottom: 1.5rem;
 }
 
 .top-container {
@@ -59,6 +50,14 @@
     margin: 0 auto;
     padding-top: 2rem;
     padding-bottom: 2rem;
+}
+
+.container {
+    min-width: 66%;
+    max-width: 66%;
+    margin: 0 auto;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
 }
 
 .header {
@@ -78,13 +77,27 @@
 }
 
 .link {
-    margin: 14px;
     text-decoration: none;
     cursor: pointer;
 }
 
 .link:hover {
     color: #c7b29a;
+}
+
+.header--link {
+    margin: 14px;
+}
+
+.rewards--link {
+    margin-top: 4rem;
+    margin-bottom: 3.5rem;
+}
+
+.copyright-link {
+    border-left: 1.5px solid #545454;
+    margin-left: 0.5rem;
+    padding-left: 0.5rem;
 }
 
 .form--svg {
@@ -425,7 +438,6 @@
     background: -o-linear-gradient(0deg, #211b19 0%, #4e3427 100%);
     background: -ms-linear-gradient(0deg, #211b19 0%, #4e3427 100%);
     background: linear-gradient(90deg, #211b19 0%, #4e3427 100%);
-    width: 1920px;
 }
 
 .promotion span {
@@ -637,7 +649,6 @@
 
 .video {
     padding: 0;
-    width: 1920px;
     height: 704px;
 }
 
@@ -832,14 +843,17 @@
 
 .recent_posts--article {
     width: 370px;
-    height: 395px;
+    /* height: 395px; */
     background-color: #fbfaf8;
-    align-items: flex-start;
     position: relative;
 }
 
 .recent_posts--article:hover {
     background-color: #362f2d;
+}
+
+.recent_posts--article--div {
+    align-items: flex-start;
 }
 
 .recent_posts--article--h3 {
@@ -849,7 +863,7 @@
     /* Приближение из-за подстановки шрифтов */
     font-weight: 500;
     text-align: left;
-    margin: 30px 0 0 29px;
+    margin: 30px 0 0 0;
 }
 
 .recent_posts--article:hover .recent_posts--article--h3 {
@@ -874,7 +888,7 @@
     /* Приближение из-за подстановки шрифтов */
     text-align: left;
     width: 297px;
-    margin: 19px 0 27px 29px;
+    margin: 19px 0 27px 0;
 }
 
 .read_more {
@@ -884,8 +898,8 @@
     /* Приближение из-за подстановки шрифтов */
     font-weight: 300;
     text-align: left;
-    margin: 0 0 0 29px;
     opacity: 0.7;
+    padding-bottom: 33px;
 }
 
 .read_more svg {
@@ -942,16 +956,14 @@
     font-family: 'Montserrat', sans-serif;
     color: #ffffff;
     font-size: 24px;
-    /* Приближение из-за подстановки шрифтов */
     font-weight: 300;
     line-height: 20px;
-    /* Приближение из-за подстановки шрифтов */
     display: flex;
     justify-content: center;
     align-items: center;
-    position: relative;
+    position: absolute;
     top: 20px;
-    right: 350px;
+    right: 300px;
 }
 
 .recent_posts_time_month {
@@ -970,9 +982,9 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    position: relative;
-    top: 20px;
-    right: 350px;
+    position: absolute;
+    top: 55px;
+    right: 300px;
 }
 
 .rewards {
@@ -1030,10 +1042,6 @@
     line-height: 20px;
     /* Приближение из-за подстановки шрифтов */
     text-align: right;
-}
-
-.link-design {
-    margin: 0;
 }
 
 hr {
@@ -1105,10 +1113,6 @@ hr {
 .Waxom--p {
     margin-top: 2rem;
     margin-bottom: 2rem;
-}
-
-.footer--link {
-    margin: 0;
 }
 
 .Our_Twitter--p span {
