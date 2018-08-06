@@ -586,26 +586,24 @@
 .list_of_projects--article--svg {
     fill: #ffffff;
     position: absolute;
+    top: 110px;
     visibility: hidden;
 }
 
-.list_of_projects--article--svg:hover {
-    fill: #c7b299;
-    visibility: visible;
-}
-
 .list_of_projects--article--svg--link {
-    fill: #ffffff;
-    position: absolute;
-    top: 110px;
     left: 144px;
 }
 
 .list_of_projects--article--svg--lupa {
-    fill: #ffffff;
-    position: absolute;
-    top: 110px;
     left: 198px;
+}
+
+.list_of_projects--article:hover .list_of_projects--article--svg {
+    visibility: visible;
+}
+
+.list_of_projects--article--svg:hover {
+    fill: #c7b299;
 }
 
 .list_of_projects--article:hover {
@@ -1135,3 +1133,10 @@ hr {
 .Our_Twitter div:hover .Our_Twitter--time {
     color: #fff;
 }
+
+/* @media only screen and (max-width: 500px) {
+    .main-header {
+      width: 90%;
+      background-color: green;
+    }
+  }   */
