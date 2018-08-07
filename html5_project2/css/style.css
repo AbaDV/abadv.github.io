@@ -45,8 +45,7 @@
 }
 
 .top-container {
-    min-width: 100%;
-    max-width: 100%;
+    width: 100%;
     margin: 0 auto;
     padding-top: 2rem;
     padding-bottom: 2rem;
@@ -1134,9 +1133,13 @@ hr {
     color: #fff;
 }
 
-/* @media only screen and (max-width: 500px) {
-    .main-header {
-      width: 90%;
-      background-color: green;
+@media (max-width: 575.98px) {
+    .video_presentation,
+    .statistics,
+    .news {
+      display: none;
     }
-  }   */
+    .statistics {
+        background: #00bff3;
+    }
+  }  
