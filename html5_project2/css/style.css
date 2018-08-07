@@ -1179,4 +1179,12 @@ hr {
     .presentation-description span {
         width: 62%;
     }
+    .product_information h2 {
+        text-align: center;
+    }
+    .presentation-description p,
+    .product_information p,
+    .recent_posts p {
+        text-align: justify;
+    }
 }
