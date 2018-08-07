@@ -110,9 +110,10 @@
 .flex {
     display: flex;
     flex-direction: row;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: space-around;
+    align-content: center;
 }
 
 .radio {
@@ -152,6 +153,7 @@
     /* Приближение из-за подстановки шрифтов */
     font-weight: 400;
     text-align: right;
+    flex-wrap: nowrap;
 }
 
 .logo--svg {
@@ -175,6 +177,19 @@
     /* Приближение из-за подстановки шрифтов */
     font-weight: 300;
     text-align: left;
+}
+
+.title_product_container {
+    flex-wrap: nowrap;
+}
+
+.title_product {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    position: relative;
+    margin: 16rem 0 16rem 0;
 }
 
 .title_product h2 {
@@ -207,17 +222,7 @@
     /* Приближение из-за подстановки шрифтов */
     text-align: center;
     margin: 7px;
-    width: 562px;
-}
-
-.title_product {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    align-items: center;
-    width: 100%;
-    position: relative;
-    margin: 16rem 0 16rem 0;
+    /* width: 562px; */
 }
 
 .slider-arrow-forward {
@@ -1136,10 +1141,15 @@ hr {
 @media (max-width: 575.98px) {
     .video_presentation,
     .statistics,
-    .news {
+    .news,
+    .slider-arrow-back,
+    .slider-arrow-forward {
         display: none;
     }
     .body {
         width: 575.98px;
+    }
+    .flex {
+        justify-content: space-evenly;
     }
 }
