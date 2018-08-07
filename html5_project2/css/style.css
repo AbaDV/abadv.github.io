@@ -1137,9 +1137,9 @@ hr {
     .video_presentation,
     .statistics,
     .news {
-      display: none;
+        display: none;
     }
-    .statistics {
-        background: #00bff3;
+    .body {
+        width: 575.98px;
     }
-  }  
+}
