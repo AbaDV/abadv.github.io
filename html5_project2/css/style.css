@@ -110,7 +110,7 @@
 .flex {
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     align-items: center;
     justify-content: space-around;
     align-content: center;
@@ -413,7 +413,7 @@
 }
 
 .presentation-description p {
-    width: 770px;
+    max-width: 770px;
     font-family: 'Montserrat', sans-serif;
     color: #8c8c8c;
     font-size: 16px;
@@ -491,7 +491,7 @@
     line-height: 28px;
     /* Приближение из-за подстановки шрифтов */
     text-align: center;
-    width: 757px;
+    max-width: 757px;
 }
 
 .list_of_projects--menu {
@@ -836,7 +836,7 @@
     line-height: 28px;
     /* Приближение из-за подстановки шрифтов */
     text-align: center;
-    width: 757px;
+    max-width: 757px;
 }
 
 .recent_posts--articles {
@@ -1147,9 +1147,13 @@ hr {
         display: none;
     }
     .body {
-        width: 575.98px;
+        width: 100%;
     }
     .flex {
         justify-content: space-evenly;
+        flex-wrap: wrap;
+    }
+    .logo {
+        flex-wrap: nowrap;
     }
 }
