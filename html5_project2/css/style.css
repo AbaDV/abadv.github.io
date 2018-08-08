@@ -1163,7 +1163,7 @@ hr {
         margin: 0;
     }
     .presentation--figure {
-        width: 44%;
+        width: 41%;
     }
     .presentation-property {
         min-width: 100%;
@@ -1186,5 +1186,27 @@ hr {
     .product_information p,
     .recent_posts p {
         text-align: justify;
+    }
+    .iPhone_in_hand {
+        width: 100%;
+        height: auto;
+    }
+    .header--menu {
+        display: none;
+    }
+    .form_search {
+        display: none;
+    }
+    .promotion span {
+        text-align: center;
+    }
+    .promotion p {
+        text-align: center;
+    }
+    .recent_posts--article--div {
+        align-items: center;
+    }
+    .product_information {
+        max-width: none;
     }
 }
