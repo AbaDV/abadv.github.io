@@ -1209,4 +1209,7 @@ hr {
     .product_information {
         max-width: none;
     }
+    .list_of_projects--menu {
+        padding-left: 0;
+    }
 }
