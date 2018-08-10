@@ -1147,10 +1147,44 @@ hr {
         display: flex;
         width: 50px;
         height: 50px;
-        background-image: url('https://cdn3.iconfinder.com/data/icons/mobile-friendly-ui/100/menu-128.png');
-        background-size: 100%;
+        /* background-image: url('https://cdn3.iconfinder.com/data/icons/mobile-friendly-ui/100/menu-128.png');
+        background-size: 100%; */
         position: absolute;
         z-index: 3;
+    }
+    #hamburger {
+        position: absolute;
+        top: 0;
+        left: 0;
+        cursor: pointer;
+        width: 50px;
+        height: 50px;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+    .bar {
+        display: block;
+        width: 44px;
+        height: 4px;
+        margin-top: 10px;
+        background: white;
+        transition: 0.25s;
+        -webkit-transition: 0.25s;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+    }
+    .animate .bar:nth-child(1) {
+        transform: translateY(14px) translateX(5px) rotate(135deg);
+    }
+    .animate .bar:nth-child(2) {
+        opacity: 0;
+    }
+    .animate .bar:nth-child(3) {
+        transform: translateY(-14px) translateX(5px) rotate(-135deg);
     }
     #header--menu:checked~.header--menu {
         visibility: visible;
@@ -1173,7 +1207,6 @@ hr {
         visibility: hidden;
         margin: 0 auto;
         height: 80vh;
-        /* height: auto; */
         width: 100%;
         flex-direction: column;
         background-color: #ccc;
