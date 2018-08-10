@@ -38,7 +38,11 @@
                     <span>Waxom</span>
                 </a>
 
-                <label for="header--menu"></label>
+                <label id="hamburger" for="header--menu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </label>
                 <input type="checkbox" id="header--menu">
                 <ul class="header--menu flex">
                     <li>
@@ -638,6 +642,7 @@
             </div>
         </section>
     </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script>
         var myVideo = document.getElementById("video");
         var aboutVideoBlock = document.getElementById('about_video');
@@ -654,7 +659,25 @@
                 myVideo.pause();
                 aboutVideoBlock.style.visibility = 'visible';
             }
-        } 
+        }
+
+        /*
+        var hamburgerButton = document.getElementById('hamburger');
+        hamburgerButton.onclick = onHamburgerClick;
+
+        function onHamburgerClick() {
+            if (hamburgerButton.className.indexOf('animate') > -1) {
+                //hamburgerButton.className 
+                // remove animate class
+            } else {
+                hamburgerButton.className += ' animate'
+            }
+        }
+        */
+
+        $('#hamburger').click(function () {
+            $(this).toggleClass('animate');
+        })
     </script>
 </body>
 
