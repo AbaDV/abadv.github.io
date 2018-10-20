@@ -59,13 +59,3 @@ console.log('lesson 3 Задание 4');
         console.log(x);
     }
 }
-
-//lesson 3 Задание 5
-
-//lesson 3 Задание 6
-
-//lesson 3 Задание 7
-
-//lesson 3 Задание 
-
-//lesson 3 Задание 
