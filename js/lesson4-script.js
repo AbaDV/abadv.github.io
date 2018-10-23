@@ -27,6 +27,7 @@ function convertNumberToObject(number) {
 
     if (number > 999) {
         console.log('Число превышает 999!');
+        return {};
     }
 }
 
