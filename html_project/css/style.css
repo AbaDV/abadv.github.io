@@ -95,13 +95,7 @@
     padding: 0;
 }
 
-.no-markers-list li a,
-.breadcrumbs a,
-.menu-item-link,
-.menu-item-active,
-.footer-column-e-mail,
-.button_buy,
-.product {
+.link {
     text-decoration: none;
 }
 
@@ -117,4 +111,33 @@
 .footer,
 .header {
     font-family: 'raleway-regular', 'Helvetica', sans-serif;
+}
+
+.cart {
+    color: black;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 2rem 0 2rem 0;
+}
+
+.incart {
+    background-color: #e0e0e0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem 0 1rem 0;
+    text-transform: uppercase;
+}
+
+.incart:visited {
+    color: black;
+}
+
+.incart:hover {
+    background-color: #bdbcbc;
 }
