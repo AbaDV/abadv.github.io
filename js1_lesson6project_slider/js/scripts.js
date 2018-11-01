@@ -1,3 +1,5 @@
+console.log('lesson 6 Задание 1-2');
+
 const images = document.querySelectorAll(".img");
 let currentImageIndex = 0;
 
