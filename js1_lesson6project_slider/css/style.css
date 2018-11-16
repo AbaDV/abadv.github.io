@@ -1,0 +1,36 @@
+.main_picture {
+    margin: 2rem;
+    max-width: 509px;
+    height: 509px;
+}
+
+.slider {
+    margin: 2rem;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.slider_pics img {
+    width: 10%;
+    height: auto;
+    cursor: pointer;
+}
+
+.slider-arrow {
+    fill: #d1d1d1;
+    width: 70px;
+    height: 70px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+}
+
+.slider-arrow:hover {
+    fill: #c7b299;
+}
+
