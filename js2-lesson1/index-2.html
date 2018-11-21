@@ -5,6 +5,9 @@
     <meta charset="utf-8">
     <title>JS 2 - урок 1 - задание 2</title>
     <script>
+
+        // ============================ Container
+
         // Создаем суперкласс, конструктор Container
         function Container() {
             this.id = "";
@@ -22,6 +25,12 @@
             let deletedElement = document.getElementById(this.id);
             deletedElement.remove();
         }
+
+        // ============================
+
+
+
+        // ============================ Menu
 
         // Создаем класс, конструктор Menu
         function Menu(my_id, my_class, my_items) {
@@ -48,6 +57,14 @@
             result += "</ul>";
             return result;
         }
+
+        // ============================
+
+
+
+
+
+        // ============================ MenuItem
 
         //Создаем класс, конструктор для пункта меню
         function MenuItem(my_href, my_name, my_id, subItems) {
@@ -77,10 +94,18 @@
                 }
                 result += "</ul>";
             }
-            
+
             result += "</li>";
             return result;
         }
+
+        // ============================
+
+
+
+
+
+        // ============================ Выполнение
 
         //Создаем 3 экземпляра, 3 пункта меню 
         var m_item1 = new MenuItem("/", "Главная", "MenuItem0");
@@ -98,6 +123,14 @@
         //Удаляем заданный элемент
         // m_item3.remove();
 
+        // ============================
+
+
+
+
+
+        // ============================ MenuTree
+
         //Создаем класс, конструктор для MenuTree
         function MenuTree(my_id, my_class, my_items) {
             Menu.call(this); //наследуем свойства Menu
@@ -109,6 +142,14 @@
         //Создаем цепочку наследования MenuTree от Menu	
         MenuTree.prototype = Object.create(Menu.prototype);
         MenuTree.prototype.constructor = MenuTree;
+
+        // ============================
+
+
+
+
+
+        // ============================ Выполнение
 
         //Создаем 2 экземпляра, 2 пункта MenuTree 
         var menuTreeItem1 = new MenuItem("/", "Главная", "menuTreeItem0");
@@ -128,6 +169,9 @@
 
         //Выводим подменю и пункты подменю на экран
         document.write(menuTree.render());
+
+        // ============================
+        
     </script>
 </head>
 
