@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8">
+    <title>JS 2 - урок 1 - задание 2</title>
+    <script>
+
+        // ============================ Container
+
+        // Создаем суперкласс, конструктор Container
+        function Container() {
+            this.id = "";
+            this.className = "";
+            this.htmlCode = "";
+        }
+
+        // Добавляем метод render
+        Container.prototype.render = function () {
+            return this.htmlCode;
+        }
+
+        // Добавляем метод remove
+        Container.prototype.remove = function () {
+            let deletedElement = document.getElementById(this.id);
+            deletedElement.remove();
+        }
+
+        // ============================
+
+
+
+        // ============================ Menu
+
+        // Создаем класс, конструктор Menu
+        function Menu(my_id, my_class, my_items) {
+            Container.call(this); //наследуем свойства Container
+            this.id = my_id;
+            this.className = my_class;
+            this.items = my_items;
+        }
+
+        //Создаем цепочку наследования Menu от Container	
+        Menu.prototype = Object.create(Container.prototype);
+        Menu.prototype.constructor = Menu;
+
+        //Переопределяем метод render для класса Menu
+        Menu.prototype.render = function () {
+            var result = "<ul class='" + this.className + "' id='" + this.id + "'>";
+
+            //В цикле проходимся по пунктам меню (this.items), внутри выполняем проверку на принадлежность к классу MenuItem
+            for (var item in this.items) {
+                if (this.items[item] instanceof MenuItem) {
+                    result += this.items[item].render();
+                }
+            }
+            result += "</ul>";
+            return result;
+        }
+
+        // ============================
+
+
+
+
+
+        // ============================ MenuItem
+
+        //Создаем класс, конструктор для пункта меню
+        function MenuItem(my_href, my_name, my_id, subItems) {
+            Container.call(this); //наследуем свойства Container
+            this.className = "menu-item";
+            this.href = my_href;
+            this.name = my_name;
+            this.id = my_id;
+            this.subItems = subItems;
+        }
+
+        //Создаем цепочку наследования MenuItem от Container	
+        MenuItem.prototype = Object.create(Container.prototype);
+        MenuItem.prototype.constructor = MenuItem;
+
+        //Переопределяем метод render для класса MenuItem
+        MenuItem.prototype.render = function () {
+            var result = "<li class='" + this.className + "' id='" + this.id + "' href='" + this.href + "'>" + this.name;
+
+            if (this.subItems) {
+                result += "<ul class='" + this.className + "' id='" + this.id + "-sub-items'>";
+                //В цикле проходимся по подпунктам меню (this.subItems), внутри выполняем проверку на принадлежность к классу MenuItem
+                for (var item in this.subItems) {
+                    if (this.subItems[item] instanceof MenuItem) {
+                        result += this.subItems[item].render();
+                    }
+                }
+                result += "</ul>";
+            }
+
+            result += "</li>";
+            return result;
+        }
+
+        // ============================
+
+
+
+
+
+        // ============================ Выполнение
+
+        //Создаем 3 экземпляра, 3 пункта меню 
+        var m_item1 = new MenuItem("/", "Главная", "MenuItem0");
+        var m_item2 = new MenuItem("/catalogue/", "Каталог", "MenuItem1");
+        var m_item3 = new MenuItem("/gallery/", "Галерея", "MenuItem2");
+
+        //Убираем пункты меню в один объект, чтобы проще было его передать в качестве аргумента в конструктор Menu
+        var m_items = { 0: m_item1, 1: m_item2, 2: m_item3 };
+        //создаем экземпляр класса Menu
+        var menu = new Menu("my_menu", "My_class", m_items);
+
+        //Выводим меню и пункты меню на экран
+        // document.write(menu.render());
+
+        //Удаляем заданный элемент
+        // m_item3.remove();
+
+        // ============================
+
+
+
+
+
+        // ============================ MenuTree
+
+        //Создаем класс, конструктор для MenuTree
+        function MenuTree(my_id, my_class, my_items) {
+            Menu.call(this); //наследуем свойства Menu
+            this.id = my_id;
+            this.className = my_class;
+            this.items = my_items;
+        }
+
+        //Создаем цепочку наследования MenuTree от Menu	
+        MenuTree.prototype = Object.create(Menu.prototype);
+        MenuTree.prototype.constructor = MenuTree;
+
+        // ============================
+
+
+
+
+
+        // ============================ Выполнение
+
+        //Создаем 2 экземпляра, 2 пункта MenuTree 
+        var menuTreeItem1 = new MenuItem("/", "Главная", "menuTreeItem0");
+
+        var menuItemProduct1 = new MenuItem("/product1", "Товар1", "menuItemProduct1");
+        var menuItemProduct2 = new MenuItem("/product2", "Товар2", "menuItemProduct2");
+
+        var catalogueMenuItems = { 0: menuItemProduct1, 1: menuItemProduct2 };
+        var menuTreeItem2 = new MenuItem("/catalogue/", "Каталог", "menuTreeItem1", catalogueMenuItems);
+
+        //Убираем пункты MenuTree в один объект, чтобы проще было его передать в качестве аргумента в конструктор Menu
+        var menuTreeItems = { 0: menuTreeItem1, 1: menuTreeItem2 };
+
+        //создаем экземпляр класса MenuTree
+        var menuTree = new MenuTree("menu-tree", "menu-tree-class", menuTreeItems);
+        console.log(menuTree);
+
+        //Выводим подменю и пункты подменю на экран
+        // document.write(menuTree.render());
+
+        // ============================
+
+
+
+
+        // ============================ AJAX
+
+        // Рекурсивное построение подпунктов меню
+        function getMenuSubItems(menuItem, level) {
+            var m_items = {};
+            if (menuItem.subItems) {
+                menuItem.subItems.map((item, index) => {
+                    var m_subItems = getMenuSubItems(item, level + 1);
+                    var menuItemId = "menu-item-" + level + "-" + index;
+                    m_items[index] = new MenuItem(item.href, item.title, menuItemId, m_subItems);
+                })
+            }
+            return m_items;
+        }
+
+        function fillMenuItems(xhr) {
+            var m_items = {};
+
+            if (xhr.readyState == 4) {
+                if (xhr.status == 200) {
+                    var items = JSON.parse(xhr.responseText);
+                    console.log(items);
+                    // for(var i=0;i<items.menu_items.length;i++) {
+
+                    // 	m_items[i] = new MenuItem(items.menu_items[i].href, items.menu_items[i].title);
+                    // }
+                    items.menu_items.map((item, index) => {
+                        var m_subItems = getMenuSubItems(item, 1);
+                        m_items[index] = new MenuItem(item.href, item.title, "menu-item-" + index, m_subItems);
+                    })
+                } else {
+                    alert('Произошла ошибка: ' + xhr.status);
+                }
+            }
+            var menu = new Menu('my_menu', 'my_class', m_items);
+            console.log(menu);
+            document.write(menu.render());
+        }
+
+
+        //XMLHttpRequest
+
+
+        var xhr = false;
+        // если используется Gecko (Chrome, Mozilla, Opera, Safari)
+        if (window.XMLHttpRequest) {
+            xhr = new XMLHttpRequest();
+            // для Mozilla Firefox, которые умеют обрабатывать ответ от сервера в случае, если тот не содержит заголовка XML mime-type  
+            if (xhr.overrideMimeType) { xhr.overrideMimeType('text/xml'); }
+
+        }
+        else if (window.ActiveXObject) { // Internet Explorer
+            try {
+                xhr = new ActiveXObject("Msxml2.XMLHTTP");
+            }
+            catch (e) {
+                try {
+                    xhr = new ActiveXObject("Microsoft.XMLHTTP");
+                }
+                catch (e) {
+                    console.log(e);
+                }
+            }
+        }
+
+        console.log(xhr);
+        if (!xhr) {
+            alert('Невозможно открыть соединение');
+        }
+
+        var m_items;
+        xhr.onreadystatechange = function () {
+            fillMenuItems(xhr);
+        }
+
+        xhr.timeout = 15000;
+        xhr.ontimeout = function () {
+            alert('Превышено время ожидания запроса')
+        }
+
+        xhr.open('GET', 'https://my-json-server.typicode.com/AbaDV/fake-json-server/db', true);
+        xhr.send(null);
+
+    </script>
+</head>
+
+<body class="body-container">
+
+</body>
+
+</html>
