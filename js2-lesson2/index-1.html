@@ -82,10 +82,10 @@
 
         //Переопределяем метод render для класса MenuItem
         MenuItem.prototype.render = function () {
-            var result = "<li class='" + this.className + "' id= " + this.id + " href='" + this.href + "'>" + this.name;
+            var result = "<li class='" + this.className + "' id='" + this.id + "' href='" + this.href + "'>" + this.name;
 
             if (this.subItems) {
-                result += "<ul class='" + this.className + "' id='" + this.id + "'>";
+                result += "<ul class='" + this.className + "' id='" + this.id + "-sub-items'>";
                 //В цикле проходимся по подпунктам меню (this.subItems), внутри выполняем проверку на принадлежность к классу MenuItem
                 for (var item in this.subItems) {
                     if (this.subItems[item] instanceof MenuItem) {
@@ -118,7 +118,7 @@
         var menu = new Menu("my_menu", "My_class", m_items);
 
         //Выводим меню и пункты меню на экран
-        document.write(menu.render());
+        // document.write(menu.render());
 
         //Удаляем заданный элемент
         // m_item3.remove();
@@ -168,10 +168,96 @@
         console.log(menuTree);
 
         //Выводим подменю и пункты подменю на экран
-        document.write(menuTree.render());
+        // document.write(menuTree.render());
 
         // ============================
-        
+
+
+
+
+        // ============================ AJAX
+
+        // Рекурсивное построение подпунктов меню
+        function getMenuSubItems(menuItem, level) {
+            var m_items = {};
+            if (menuItem.subItems) {
+                menuItem.subItems.map((item, index) => {
+                    var m_subItems = getMenuSubItems(item, level + 1);
+                    var menuItemId = "menu-item-" + level + "-" + index;
+                    m_items[index] = new MenuItem(item.href, item.title, menuItemId, m_subItems);
+                })
+            }
+            return m_items;
+        }
+
+        function fillMenuItems(xhr) {
+            var m_items = {};
+
+            if (xhr.readyState == 4) {
+                if (xhr.status == 200) {
+                    var items = JSON.parse(xhr.responseText);
+                    console.log(items);
+                    // for(var i=0;i<items.menu_items.length;i++) {
+
+                    // 	m_items[i] = new MenuItem(items.menu_items[i].href, items.menu_items[i].title);
+                    // }
+                    items.menu_items.map((item, index) => {
+                        var m_subItems = getMenuSubItems(item, 1);
+                        m_items[index] = new MenuItem(item.href, item.title, "menu-item-" + index, m_subItems);
+                    })
+                } else {
+                    alert('Произошла ошибка: ' + xhr.status);
+                }
+            }
+            var menu = new Menu('my_menu', 'my_class', m_items);
+            console.log(menu);
+            document.write(menu.render());
+        }
+
+
+        //XMLHttpRequest
+
+
+        var xhr = false;
+        // если используется Gecko (Chrome, Mozilla, Opera, Safari)
+        if (window.XMLHttpRequest) {
+            xhr = new XMLHttpRequest();
+            // для Mozilla Firefox, которые умеют обрабатывать ответ от сервера в случае, если тот не содержит заголовка XML mime-type  
+            if (xhr.overrideMimeType) { xhr.overrideMimeType('text/xml'); }
+
+        }
+        else if (window.ActiveXObject) { // Internet Explorer
+            try {
+                xhr = new ActiveXObject("Msxml2.XMLHTTP");
+            }
+            catch (e) {
+                try {
+                    xhr = new ActiveXObject("Microsoft.XMLHTTP");
+                }
+                catch (e) {
+                    console.log(e);
+                }
+            }
+        }
+
+        console.log(xhr);
+        if (!xhr) {
+            alert('Невозможно открыть соединение');
+        }
+
+        var m_items;
+        xhr.onreadystatechange = function () {
+            fillMenuItems(xhr);
+        }
+
+        xhr.timeout = 15000;
+        xhr.ontimeout = function () {
+            alert('Превышено время ожидания запроса')
+        }
+
+        xhr.open('GET', 'https://my-json-server.typicode.com/AbaDV/fake-json-server/db', true);
+        xhr.send(null);
+
     </script>
 </head>
 
