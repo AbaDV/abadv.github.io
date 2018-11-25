@@ -22,6 +22,19 @@
             font-family: roboto-light;
             src: url(fonts/roboto/roboto-light.ttf);
         }
+
+        .error input,
+        .error textarea {
+            border: 1px solid red;
+        }
+
+        .error {
+            color: red;
+        }
+
+        .error-message {            
+            font-size: 0.7rem;
+        }
     </style>
 </head>
 
@@ -114,23 +127,28 @@
                     <fieldset>
                         <legend>Контактная информация</legend>
                         <div class="FIO">
-                            <div class="name">
+                            <!-- <div class="name">
                                 <label for="lastname">Фамилия</label>
                                 <input type="text" name="lastname" id="lastname" placeholder="Иванов">
-                            </div>
+                            </div> -->
                             <div class="name">
                                 <label for="name">Имя</label>
                                 <input type="text" name="firstname" id="name" placeholder="Иван">
                             </div>
-                            <div class="name">
+                            <!-- <div class="name">
                                 <label for="middlename">Отчество</label>
                                 <input type="text" name="middlename" id="middlename" placeholder="Иванович">
-                            </div>
+                            </div> -->
                         </div>
                         <br>
                         <div class="Email">
                             <label for="Email">Email</label>
                             <input type="email" name="email" placeholder="ivanov@ya.ru">
+                        </div>
+                        <br>
+                        <div class="Phone">
+                            <label for="Phone">Телефон</label>
+                            <input type="phone" name="phone" placeholder="+7-495-123-45-67">
                         </div>
                     </fieldset>
                     <br>
