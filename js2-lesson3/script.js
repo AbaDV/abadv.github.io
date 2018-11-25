@@ -33,13 +33,49 @@ console.log(emailRegex.test('my.mail@mail.ru')); // true
 console.log(emailRegex.test('my-mail@mail.ru')); // true
 */
 
+function setValidationError(container, errorMessage) {
+    container.className = 'error';
+    let msgElem = document.createElement('span');
+    msgElem.className = "error-message";
+    msgElem.innerHTML = errorMessage;
+    container.appendChild(msgElem);
+}
+
+function resetValidationError(container) {
+    container.className = '';
+    if (container.lastChild.className == "error-message") {
+        container.removeChild(container.lastChild);
+    }
+}
+
 function onsubmitFeedbackForm(form) {
     let elements = form.elements;
 
+    resetValidationError(elements.firstname.parentNode);
+    resetValidationError(elements.phone.parentNode);
+    resetValidationError(elements.email.parentNode);
 
+    let nameValid, phoneValid, emailValid = true;
+    
+    if (!nameRegex.test(elements.firstname.value)) {
+        setValidationError(elements.firstname.parentNode, 'Имя отсутствует или введено некорректно');
+        // alert('Имя отсутствует или введено некорректно');
+        nameValid = false;
+    }
 
-    debugger
+    if (!phoneRegex.test(elements.phone.value)) {
+        setValidationError(elements.phone.parentNode, 'Телефон отсутствует или введен некорректно (правильный формат: +7-xxx-xxx-xx-xx)');
+        // alert('Телефон отсутствует или введен некорректно (правильный формат: +7-xxx-xxx-xx-xx)');
+        phoneValid = false;
+    }
 
-    return false;
+    if (!emailRegex.test(elements.email.value)) {
+        setValidationError(elements.email.parentNode, 'Емайл отсутствует или введен некорректно');
+        // alert('Емайл отсутствует или введен некорректно');
+        emailValid = false;
+    }
+
+    const formValid = nameValid && phoneValid && emailValid;
+    return formValid;
 }
 
