@@ -116,28 +116,28 @@
                         <div class="FIO">
                             <div class="name">
                                 <label for="lastname">Фамилия</label>
-                                <input type="text" name="ФИО" id="lastname" placeholder="Иванов">
+                                <input type="text" name="lastname" id="lastname" placeholder="Иванов">
                             </div>
                             <div class="name">
                                 <label for="name">Имя</label>
-                                <input type="text" name="ФИО" id="name" placeholder="Иван">
+                                <input type="text" name="firstname" id="name" placeholder="Иван">
                             </div>
                             <div class="name">
                                 <label for="middlename">Отчество</label>
-                                <input type="text" name="ФИО" id="middlename" placeholder="Иванович">
+                                <input type="text" name="middlename" id="middlename" placeholder="Иванович">
                             </div>
                         </div>
                         <br>
                         <div class="Email">
                             <label for="Email">Email</label>
-                            <input type="email" name="Email" placeholder="ivanov@ya.ru">
+                            <input type="email" name="email" placeholder="ivanov@ya.ru">
                         </div>
                     </fieldset>
                     <br>
                     <fieldset>
                         <legend>Тема сообщения</legend>
                         <div>
-                            <input type="text" name="Тема сообщения" placeholder="Тема сообщения">
+                            <input type="text" name="message" placeholder="Тема сообщения">
                         </div>
                     </fieldset>
                     <br>
@@ -150,7 +150,7 @@
                     <br>
                     <div>
                         <input class="button-form" type="reset" value="Очистить">
-                        <input class="button-form" type="submit" value="Отправить">
+                        <input class="button-form" type="button" value="Отправить" onclick="onsubmitFeedbackForm(this.form);">
                     </div>
 
                 </form>
@@ -341,27 +341,7 @@
     ** - E-mail выглядит как mymail@mail.ru, или my.mail@mail.ru, или my-mail@mail.ru**
     ** - Текст произвольный;**
     ** - В случае не прохождения валидации одним из полей необходимо выделять это поле красной рамкой и сообщать пользователю об ошибке.** -->
-    <script>
-        const nameRegex = /[a-zA-Zа-яА-Я]{2,}/;
-        console.log('Name regex:');
-        console.log(nameRegex.test('Ва')); // true
-        console.log(nameRegex.test('Вася')); // true
-        console.log(nameRegex.test('123')); // false
-        console.log(nameRegex.test('V')); // false
-        console.log(nameRegex.test('Vasya')); // true
-
-        const phoneRegex = /\+7-\d{3}-\d{3}-\d{2}-\d{2}/;
-        console.log('Phone regex:');
-        console.log(phoneRegex.test("+7-495-000-00-00")); // true
-        console.log(phoneRegex.test("84950000000")); // false
-
-        const emailRegex = /(\w+|\w+(\.|\-)\w+)@[a-zA-Z]+\.[a-zA-Z]{2,6}/; //Адрес email
-        console.log('Email regex:');
-        console.log(emailRegex.test('mymail@mail.ru')); // true
-        console.log(emailRegex.test('my.mail@mail.ru')); // true
-        console.log(emailRegex.test('my-mail@mail.ru')); // true
-        
-    </script>
+    <script src="../js2-lesson3/script.js">
     </script>
 </body>
 
