@@ -1,0 +1,74 @@
+<!-- Задание 1
+С помощью jQuery создать контрол, работающий с вкладками.
+Пример - http://dimox.name/examples/universal-jquery-tabs-script/ . 
+Можно использовать любую анимацию, методы show, hide и подобные -->
+<!DOCTYPE html>
+</script>
+<html lang="en">
+
+
+<head>
+    <meta charset="utf-8">
+    <title>JS 2 - урок 4 - задание 1</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <h2>Первые табы</h2>
+    <div class="blogtabs0 mytabs1">
+        <!-- Вкладки выполнены в виде списка с якорными ссылками -->
+        <ul class="blogtabs1">
+            <li class="blogtabs2 blogtabs3active"><a href="#vkladka1" class="active">Описание</a></li>
+            <li class="blogtabs2"><a href="#vkladka2">Характеристики</a></li>
+            <li class="blogtabs2"><a href="#vkladka3">Отзывы</a></li>
+        </ul>
+        <!-- Содержимое каждой вкладки имеет id в соответствии с якорной ссылкой -->
+        <div class="blogtabs4">
+            <div class="blogtabs5" id="vkladka1">
+                <h3>Описание</h3>
+                <p>Текст описания товара </p>
+            </div>
+            <div class="blogtabs5" id="vkladka2">
+                <h3>Характеристики</h3>
+                <p>Список характеристик</p>
+            </div>
+            <div class="blogtabs5" id="vkladka3">
+                <h3>Отзывы</h3>
+                <p>Форма отзыва и список отзывов</p>
+            </div>
+        </div>
+    </div>
+
+
+    <h2>Вторые табы</h2>
+    <div class="blogtabs0 mytabs2">
+        <ul class="blogtabs1">
+            <li class="blogtabs2 blogtabs3active"><a href="#vk1" class="active">Вкладка 1</a></li>
+            <li class="blogtabs2"><a href="#vk2">Вкладка 2</a></li>
+        </ul>
+        <div class="blogtabs4">
+            <div class="blogtabs5" id="vk1">Любой желающий может стать моделью в этно стиле! Использование аквагрима
+                дает такую возможность, вы можете приобщиться к древней магии. Мы создадим неповторимый образ и
+                профессиональный фотограф сохранит его для Вас!</div>
+            <div class="blogtabs5" id="vk2">Изучая материал об орнаментальном искусстве коренных малочисленных народов
+                Хабаровского края и общаясь с носителями культуры , я собрала уникальный и интересный материал. </div>
+        </div>
+    </div>
+
+    </div><!-- .tabs-->
+    <script src="js/script1.js">
+    </script>
+</body>
+
+</html>
+
+<!-- Задание 2
+В форму обратной связи добавить возможность выбора города обращения. Сам список должен загружаться после загрузки страницы через AJAX.-->
+
+
+
+<!-- Задание 3*
+Список из п.2 превратить в текстовое поле-автокомплит.
+Если пользователь ввёл 3 и более символов, нужно подгрузить список городов и показать подходящие по вводу.
+При клике на подходящий город, ввести его полное название в текстовое поле.-->
