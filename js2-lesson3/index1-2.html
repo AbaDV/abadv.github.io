@@ -31,9 +31,9 @@
         Check-in assistant: 'Ok, just one moment. This is your boarding pass. Here's your seat number and the departure gate. Enjoy your flight!'
         `;
 
-        // alert(text.replace(/\'((?!(\'(?=s\s))|(s\'\s)).)/g, '"'));
+        alert(text.replace(/'(.*)'/g, '"$1"'));
 
-        alert(text.replace(/(?!s'|[a-z]'[a-z])([\s\S])'|^'/g, '$1"'));
+        // alert(text.replace(/(?!s'|[a-z]'[a-z])([\s\S])'|^'/g, '$1"'));
 
     </script>
 </head>
