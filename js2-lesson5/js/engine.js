@@ -29,12 +29,12 @@ Basket.prototype.constructor = Basket;
 
 //Рендеринг корзины
 Basket.prototype.render = function(recipient){
-	var basket_div = $('<div/>', {
+	let basket_div = $('<div/>', {
 		id: this.id,
 		text: 'Корзина'
 	})
 
-	var basket_items_div = $('<div/>', {
+	let basket_items_div = $('<div/>', {
 		id: this.id + "_items",		
 	})
 
@@ -45,7 +45,7 @@ Basket.prototype.render = function(recipient){
 
 //GET запрос к серверу, получение данных о корзине
 Basket.prototype.collectBasketItems = function(){
-	var append_id = "#" + this.id + "_items";
+	let append_id = "#" + this.id + "_items";
 
 	//Запрос к серверу на получение корзины
 	$.get({
@@ -55,7 +55,7 @@ Basket.prototype.collectBasketItems = function(){
 		success: function(respond) {
 			
 			//Создаю div с данными корзины
-			var basket_data = $('<div/>', {
+			let basket_data = $('<div/>', {
 				id: 'basket_data',				
 			})
 
@@ -87,7 +87,7 @@ Basket.prototype.add = function(id_product, quantity, price){
 	console.log('price: ', price);
 	//Переменная data хранит тело запроса post
 
-	var data = {
+	let data = {
 		 "id_product": id_product,
 		  "price": price,
 		  "quantity": quantity
@@ -110,9 +110,9 @@ Basket.prototype.add = function(id_product, quantity, price){
 		success: function(respond) {	
 			console.log(data);		
 			//Общее количество товаров
-			var totalQuantity = 0;
+			let totalQuantity = 0;
 
-			var basket_item = {
+			let basket_item = {
 				"id_product": id_product,
 				"price": price,
 			}
@@ -144,7 +144,7 @@ Basket.prototype.add = function(id_product, quantity, price){
 
 //Обновить корзину
 Basket.prototype.refresh = function(answer){
-	var basket_data_div = $('#basket_data');
+	let basket_data_div = $('#basket_data');
 
 	basket_data_div.empty();
 	basket_data_div.append("<p>Всего товаров: " + this.count_goods + "</p>");
@@ -152,3 +152,63 @@ Basket.prototype.refresh = function(answer){
 
 }
 
+
+//Удалить товар из корзины
+Basket.prototype.remove = function(id_product, quantity, price){
+	
+	console.log('price: ', price);
+	//Переменная data хранит тело запроса post
+
+	let data = {
+		"id_product": id_product,
+		"price": price,
+		"quantity": quantity
+	}
+
+	//Создаем запрос post 
+	$.post({
+		//url запроса (см. сваггер или апи)
+		url: 'http://localhost:8080/basket/1/delete',
+		// перепривязываем контекст, чтобы работать со свойствами класса Basket
+		context: this,
+		//Отправляем заголовки
+		headers: {
+			'Accept': 'application/json',
+			'Content-Type': 'application/json'
+		},
+		//Тело запроса
+		data: JSON.stringify(data),
+		//Получаем ответ от сервера и работаем с ним
+		success: function(respond) {
+			console.log(data);		
+			//Общее количество товаров
+			let totalQuantity = 0;
+
+			let basket_item = {
+				"id_product": id_product,
+				"price": price,
+			}
+
+			console.log('basket_item: ', basket_item);
+
+			//Считаем общее количество товаров
+			respond.basket.map(item => {
+				totalQuantity += item.quantity;
+			})
+
+			this.count_goods = totalQuantity;
+
+			//Бэкэнд сам считает стоимость корзины
+			this.amount = respond.full_price;
+
+
+			this.basket_items.pop(basket_item);
+			this.refresh();
+		},
+		error: function(jqXhr, textStatus, errorThrown){
+			console.log(textStatus, jqXhr);
+		}
+
+	})
+	
+}
