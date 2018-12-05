@@ -1,23 +1,19 @@
-.FIO {
+.form-wrapper {
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
     flex-wrap: wrap;
 }
 
-.name {
-    display: inline-block;
-    margin: 0 0.5em 0.5em 0;
-}
-
 .label input[placeholder],
-.label textarea {
+.label textarea,
+.form {
     background-color: antiquewhite;
     border: 2px solid gray;
     outline: none;
     padding: 5px;
     text-transform: capitalize;
-    width: 78%;
+    margin: 0.5rem;
 }
 
 .label input[type="Email"]:focus {
@@ -46,4 +42,8 @@
 
 .label textarea {
     max-height: 160px;
+}
+
+.button-form {
+    margin: 1rem 1rem 1rem 0;
 }

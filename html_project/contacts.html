@@ -128,60 +128,53 @@
                 <h1>Напишите нам</h1>
 
                 <form action="mailto:#" method="post" class="label">
-                    <fieldset>
+                    <fieldset class="form-wrapper">
                         <legend>Контактная информация</legend>
-                        <div class="FIO">
-                            <!-- <div class="name">
-                                <label for="lastname">Фамилия</label>
-                                <input type="text" name="lastname" id="lastname" placeholder="Иванов">
-                            </div> -->
-                            <div class="name">
-                                <label for="name">Имя</label>
-                                <input type="text" name="firstname" id="name" placeholder="Иван">
-                            </div>
-                            <!-- <div class="name">
-                                <label for="middlename">Отчество</label>
-                                <input type="text" name="middlename" id="middlename" placeholder="Иванович">
-                            </div> -->
+                        <div>
+                            <label for="name">Имя</label>
+                            <input type="text" name="firstname" id="name" placeholder="Иван">
                         </div>
-                        <br>
+                        <div>
+                            <label for="datepicker">Дата рождения</label>
+                            <input type="text" name="datepicker" id="datepicker" class="form">
+                            <div id="dialog1" title="Basic dialog">
+                                <p>Дата рождения должна быть в формате: dd/mm/yyyy</p>
+                            </div>
+                            <div id="dialog2" title="Basic dialog">
+                                <p>Дата рождения должна быть меньше текущей даты</p>
+                            </div>
+                        </div>
                         <div class="Email">
                             <label for="Email">Email</label>
-                            <input type="email" name="email" placeholder="ivanov@ya.ru">
+                            <input type="email" name="email" placeholder="ivanov@ya.ru" class="form">
                         </div>
-                        <br>
                         <div class="Phone">
                             <label for="Phone">Телефон</label>
-                            <input type="phone" name="phone" placeholder="+7-495-123-45-67">
+                            <input type="phone" name="phone" placeholder="+7-495-123-45-67" class="form">
                         </div>
-                        <br>
                         <div class="City">
                             <label for="city-input">Город</label>
                             <input type="text" name="city-input" placeholder="Укажите город">
                         </div>
                     </fieldset>
-                    <br>
                     <fieldset>
                         <legend>Тема сообщения</legend>
                         <div>
                             <input type="text" name="message" placeholder="Тема сообщения">
                         </div>
                     </fieldset>
-                    <br>
                     <fieldset>
                         <legend>Текст сообщения</legend>
                         <div>
                             <textarea name="Введите сообщение" cols="95" rows="10" placeholder="Текст сообщения"></textarea>
                         </div>
                     </fieldset>
-                    <br>
                     <div>
                         <input class="button-form" type="reset" value="Очистить">
                         <input class="button-form" type="button" value="Отправить" onclick="onsubmitFeedbackForm(this.form);">
                     </div>
 
                 </form>
-                <br>
                 <div>
                     <h1>Адрес</h1>
                     <div class="address">
