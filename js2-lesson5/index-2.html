@@ -1,0 +1,43 @@
+<!-- Задание 2
+Создать модуль сбора отзывов:
+    Модуль может выводить отзывы (пока из JSON-заглушки).
+    Модуль может добавлять отзывы.
+    Модуль может одобрять отзывы.
+    Модуль может удалять отзывы.
+    Модуль подчиняется следующим соглашениям.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>JS 2 - урок 5 - задание 2</title>
+    <!-- <link rel="stylesheet" href="css/style.css"> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="js/review.js" type="text/javascript"></script>
+    <script src="js/script-review.js" type="text/javascript"></script>
+</head>
+
+<body>
+    <div id="review_wrapper"></div>
+
+    <div class="review">
+        <label for="review">Отзыв:</label>
+        <div>
+            <textarea name="review" id="review" cols="30" rows="10"></textarea>
+        </div>
+        <div>
+            <input type="button" id="addReview" value="Добавить отзыв">
+            <input type="button" id="deleteReview" value="Удалить отзыв">
+        </div>
+    </div>
+
+    <div class="all-reviews">
+        <p>Отзывы</p>
+        <ul id="review-list"></ul>
+    </div>
+
+</body>
+
+</html>
