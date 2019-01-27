@@ -1,9 +1,20 @@
-class Login extends React.Component {    
+import React from 'react';
+
+class Login extends React.Component {
     render() {
         return <div>
-            <h3>Login</h3>
+            <form>
+                <label>Login</label>
+                <input type='text'></input>
+                
+                <label>Password</label>
+                <input type='password'></input>
+
+                <button>Войти</button>
+            </form>
+
         </div>
     }
 }
 
-exports.Login = Login
+export default Login;

@@ -1,4 +1,8 @@
-import { Developer } from "./developer";
+import React from 'react';
+import ReactDOM from 'react-dom';
+import App from './App';
 
-let developer1 = new Developer('Jhon', 26);
-console.log(developer1.displayInfo());
+ReactDOM.render(
+    <App />,
+    document.getElementById('root')
+);
