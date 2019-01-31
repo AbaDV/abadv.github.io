@@ -1,18 +1,29 @@
 import React from 'react';
-import Login from './Login';
-import Menu from './Menu';
+import Blog from './app/components';
+import WelcomeModal from './app/components';
+
+const posts = [{
+    id: 1,
+    title: 'Пост 1',
+    text: 'текст 1',
+}, {
+    id: 2,
+    title: 'Пост 2',
+    text: 'текст 2',
+}, {
+    id: 3,
+    title: 'Пост 3',
+    text: 'текст 3',
+}, {
+    id: 4,
+    title: 'Пост 4',
+    text: 'текст 4',
+}];
 
 class App extends React.Component {
     render() {
-        const MenuItems = [
-            { href: "/", title: "Главная" },
-            { href: "/about", title: "О нас" },
-            { href: "/service", title: "Услуги" },
-            { href: "/contacts", title: "Контакты" }
-        ]
         return <div>
-            <Login />
-            <Menu titleMenu="Меню:" items={MenuItems} />
+            <Blog posts={posts} />
         </div>;
     }
 }
