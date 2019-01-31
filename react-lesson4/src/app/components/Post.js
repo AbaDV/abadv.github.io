@@ -6,7 +6,7 @@ class Post extends React.Component {
         const { post } = this.props;
 
         return <div>
-            <h4>{p.title}</h4>
+            <h4>{post.title}</h4>
             <p>{post.text}</p>
         </div>;
     }

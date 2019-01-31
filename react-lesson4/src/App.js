@@ -1,6 +1,6 @@
 import React from 'react';
-import Blog from './app/components';
-import WelcomeModal from './app/components';
+import Blog from './app/components/Blog';
+import WelcomeModal from './app/components/WelcomeModal';
 
 const posts = [{
     id: 1,
@@ -24,6 +24,7 @@ class App extends React.Component {
     render() {
         return <div>
             <Blog posts={posts} />
+            <WelcomeModal />
         </div>;
     }
 }

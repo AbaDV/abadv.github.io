@@ -6,9 +6,11 @@ class WelcomeModal extends React.Component {
         super(props);
 
         this.state = { modal: false }
+        
+        this.handleCloseButton = this.handleCloseButton.bind(this);
     }
     componentDidMount() {
-
+        this.showModal();
     }
 
     showModal() {
@@ -23,14 +25,19 @@ class WelcomeModal extends React.Component {
         });
     }
 
-    close() {
+    handleCloseButton() {
         this.hideModal();
     }
 
     render() {
+        const isShow = this.state.modal;
+
+        if (!isShow)
+            return null;
+
         return <div>
             <p>Модальное окно</p>
-            <button onClick={this.close}>Закрыть</button>
+            <button onClick={this.handleCloseButton}>Закрыть</button>
         </div>;
     }
 }
