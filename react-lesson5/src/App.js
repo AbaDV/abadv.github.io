@@ -1,32 +1,29 @@
 import React from 'react';
-import Blog from './app/components/Blog';
-import WelcomeModal from './app/components/WelcomeModal';
+import ReactDOM from 'react-dom';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import { Router, Route, IndexRoute, browserHistory } from 'react-router';
 
-const posts = [{
-    id: 1,
-    title: 'Пост 1',
-    text: 'текст 1',
-}, {
-    id: 2,
-    title: 'Пост 2',
-    text: 'текст 2',
-}, {
-    id: 3,
-    title: 'Пост 3',
-    text: 'текст 3',
-}, {
-    id: 4,
-    title: 'Пост 4',
-    text: 'текст 4',
-}];
+import Layout from './app/layouts/Layout';
+// import MainPage from './app/components/Main';
+// import About from './app/components/About';
+// import Contacts from './app/components/Contacts';
+// import PageNotFound from './app/components/PageNotFound';
+import MainPage from './app/pages/Main';
+import Users from './app/pages/Users';
+import User from './app/pages/User';
+import PageNotFound from './app/pages/PageNotFound';
 
-class App extends React.Component {
-    render() {
-        return <div>
-            <Blog posts={posts} />
-            <WelcomeModal />
-        </div>;
-    }
-}
 
-export default App;
+const app = document.querySelector('#root');
+
+ReactDOM.render(
+    <Router history={browserHistory}>
+        <Route path="/" component={Layout}>
+            <IndexRoute component={MainPage} />
+            <Route path="users" component={Users} />
+            <Route path="users/:userId" component={User} />
+
+            <Route path="*" component={PageNotFound} />
+        </Route>
+    </Router>,
+    app);

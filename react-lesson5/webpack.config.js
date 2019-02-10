@@ -7,7 +7,7 @@ module.exports = {
     entry: {
         //именно так потому, что этот метод сам ставит нужный слэш
         //в линуксе слэш в обратную сторону
-        main: path.resolve(__dirname, 'src', 'index.jsx'),
+        main: path.resolve(__dirname, 'src', 'App.js'),
     },
     //куда помещаем сборку
     output: {
@@ -32,6 +32,11 @@ module.exports = {
                     loader: 'babel-loader', // для преобразования jsx в js
                 }
             },
+            {
+                test: /\.css$/,
+                use: ['style-loader', 'css-loader'],
+                // use: ['to-string-loader', 'css-loader'],
+            },
         ]
     },
     resolve: {
@@ -45,4 +50,5 @@ module.exports = {
             filename: 'index.html'
         }),
     ],
+
 };
