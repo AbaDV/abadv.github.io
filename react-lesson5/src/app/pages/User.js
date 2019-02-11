@@ -20,5 +20,9 @@ export default class User extends React.Component {
                 {this.state.user && <UserProfile {...this.state.user} />}
             </div>
         );
+        // if (!this.state.user)
+        //     return null;
+
+        // return <UserProfile {...this.state.user} />;
     }
 }

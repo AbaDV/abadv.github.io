@@ -12,6 +12,10 @@ import MainPage from './app/pages/Main';
 import Users from './app/pages/Users';
 import User from './app/pages/User';
 import PageNotFound from './app/pages/PageNotFound';
+import PostsContainer from './app/pages/PostsContainer';
+import PostContainer from './app/pages/PostContainer';
+import CommentsContainer from './app/pages/CommentsContainer';
+import CommentContainer from './app/pages/CommentContainer';
 
 
 const app = document.querySelector('#root');
@@ -22,6 +26,10 @@ ReactDOM.render(
             <IndexRoute component={MainPage} />
             <Route path="users" component={Users} />
             <Route path="users/:userId" component={User} />
+            <Route path="posts" component={PostsContainer} />
+            <Route path="posts/:postId" component={PostContainer} />
+            <Route path="comments" component={CommentsContainer} />
+            <Route path="comments/:commentId" component={CommentContainer} />
 
             <Route path="*" component={PageNotFound} />
         </Route>
