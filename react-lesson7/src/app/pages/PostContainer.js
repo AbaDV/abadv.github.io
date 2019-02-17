@@ -1,27 +1,34 @@
 import React from 'react';
 import Post from '../components/Post';
-import axios from 'axios';
+import { connect } from 'react-redux';
 
-export default class PostContainer extends React.Component {
+import { fetchPost } from "../actions/postActions";
+
+class PostContainer extends React.Component {
     constructor(props) {
         super(props);
-        this.state = {
-            post: []
-        };
-
-        console.log('props.params: ', this.props.params);
-        
-
-        axios.get(`https://jsonplaceholder.typicode.com/posts/${this.props.params.postId}`)
-            .then(response => {
-                this.setState({ post: response.data })
-            })
     }
+
+    componentDidMount() {
+        const { fetchPost, params } = this.props;
+        if (fetchPost) {
+            fetchPost(params.postId);
+        }
+    }
+    
     render() {
         return (
             <div>
-                {this.state.post && <Post {...this.state.post} />}
+                {this.props.post && <Post {...this.props.post} />}
             </div>
         );
     }
 }
+
+function mapStateToProps(state) {
+    return {
+        post: state.post,
+    }
+}
+
+export default connect(mapStateToProps, { fetchPost })(PostContainer);
