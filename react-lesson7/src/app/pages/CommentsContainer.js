@@ -1,27 +1,37 @@
 import React from 'react';
 import Comments from '../components/Comments';
-import axios from 'axios';
+import { connect } from 'react-redux';
 
-export default class CommentsContainer extends React.Component {
+import { fetchComments } from "../actions/commentActions";
+
+class CommentsContainer extends React.Component {
     constructor(props) {
         super(props);
-        this.state = {
-            comments: []
-        };
-
-        axios.get(`https://jsonplaceholder.typicode.com/comments/`)
-            .then(response => {
-                this.setState({ comments: response.data })
-            })
     }
+
+    componentDidMount() {
+        const { fetchComments } = this.props;
+        if (fetchComments) {
+            fetchComments();
+        }
+    }
+
     render() {
         return (
             <div>
                 {!this.props.children ?
-                    (<Comments comments={this.state.comments}/>)
+                    (<Comments comments={this.props.comments}/>)
                     :
                     !this.props.children}
             </div>
         );
     }
 }
+
+function mapStateToProps(state) {
+    return {
+        comments: state.comments,
+    }
+}
+
+export default connect(mapStateToProps, { fetchComments })(CommentsContainer);
